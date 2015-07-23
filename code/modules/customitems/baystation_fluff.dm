@@ -483,7 +483,7 @@
 	siemens_coefficient = 0.30
 	permeability_coefficient = 0.01
 	item_color="white"
-	species_restricted = list("exclude","Unathi")
+	species_restricted = list("exclude","Soghun")
 
 /obj/item/clothing/gloves/fluff/walter_brooks_1 //botanistpower: Walter Brooks
 	name = "mittens"
@@ -609,8 +609,8 @@
 	name = "old scarf"
 	desc = "An old looking scarf, it seems to be fairly worn."
 	icon = 'icons/obj/clothing/suits.dmi'
-	icon_state = "mantle-unathi"
-	item_state = "mantle-unathi"
+	icon_state = "mantle-Soghun"
+	item_state = "mantle-Soghun"
 	body_parts_covered = UPPER_TORSO
 
 //////////// Uniforms ////////////

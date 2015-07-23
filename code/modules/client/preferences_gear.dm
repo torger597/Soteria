@@ -575,19 +575,19 @@ proc/populate_gear_list()
 	whitelisted = "Tajaran"
 */
 
-/datum/gear/unathi_robe
+/datum/gear/Soghun_robe
 	display_name = "roughspun robe"
-	path = /obj/item/clothing/suit/unathi/robe
+	path = /obj/item/clothing/suit/Soghun/robe
 	cost = 3
 //	slot = slot_wear_suit
-	whitelisted = "Unathi"
+	whitelisted = "Soghun"
 
-/datum/gear/unathi_mantle
+/datum/gear/Soghun_mantle
 	display_name = "hide mantle"
-	path = /obj/item/clothing/suit/unathi/mantle
+	path = /obj/item/clothing/suit/Soghun/mantle
 	cost = 2
 //	slot = slot_wear_suit
-	whitelisted = "Unathi"
+	whitelisted = "Soghun"
 
 /datum/gear/cigar_case
 	display_name = "cigar case"
