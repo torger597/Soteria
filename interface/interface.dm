@@ -23,21 +23,21 @@
 		src << "\red The forum URL is not set in the server configuration."
 	return
 
-/client/verb/aurorawiki()	//Aurora's wiki verb, because yes.
-	set name = "aurorawiki"
-	set desc = "Visit the Aurorastation wiki, where the lore is found!"
+/client/verb/Hypatiawiki()	//Hypatia's wiki verb, because yes.
+	set name = "Hypatiawiki"
+	set desc = "Visit the Hypatiastation wiki, where the lore is found!"
 	set hidden = 1
-	if( config.aurorawikiurl )
+	if( config.Hypatiawikiurl )
 		if(alert("This will open the wiki in your browser. Are you sure?",,"Yes","No")=="No")
 			return
-		src << link(config.aurorawikiurl)
+		src << link(config.Hypatiawikiurl)
 	else
-		src << "\red The URL for the Aurorastation wiki is not set in the server configuration."
+		src << "\red The URL for the Hypatiastation wiki is not set in the server configuration."
 	return
 
 /client/verb/github()
 	set name = "github"
-	set desc = "Visit the Aurorastation Github page, where bugs and issues can be reported!"
+	set desc = "Visit the Hypatiastation Github page, where bugs and issues can be reported!"
 	set hidden = 1
 	if ( config.githuburl )
 		if(alert("This will open the Github Issues page in your browser. Are you sure?",,"Yes","No")=="No")
