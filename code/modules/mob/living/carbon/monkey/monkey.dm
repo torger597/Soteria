@@ -30,7 +30,7 @@
 	icon_state = "skrellkey1"
 	uni_append = list(0x01C,0xC92) // 01CC92
 
-/mob/living/carbon/monkey/Soghun
+/mob/living/carbon/monkey/unathi
 	name = "stok"
 	voice_name = "stok"
 	speak_emote = list("hisses")
@@ -79,12 +79,12 @@
 	update_icons()
 	return
 
-/mob/living/carbon/monkey/Soghun/New()
+/mob/living/carbon/monkey/unathi/New()
 
 	..()
 	dna.mutantrace = "lizard"
-	greaterform = "Soghun"
-	add_language("Sinta'Soghun")
+	greaterform = "Unathi"
+	add_language("Sinta'unathi")
 
 /mob/living/carbon/monkey/skrell/New()
 

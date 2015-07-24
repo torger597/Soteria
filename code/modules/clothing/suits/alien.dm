@@ -1,17 +1,17 @@
-//Soghun clothing.
+//Unathi clothing.
 
-/obj/item/clothing/suit/Soghun/robe
+/obj/item/clothing/suit/unathi/robe
 	name = "roughspun robes"
-	desc = "A traditional Soghun garment."
-	icon_state = "robe-Soghun"
-	item_state = "robe-Soghun"
+	desc = "A traditional Unathi garment."
+	icon_state = "robe-unathi"
+	item_state = "robe-unathi"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
-/obj/item/clothing/suit/Soghun/mantle
+/obj/item/clothing/suit/unathi/mantle
 	name = "hide mantle"
 	desc = "A rather grisly selection of cured hides and skin, sewn together to form a ragged mantle."
-	icon_state = "mantle-Soghun"
-	item_state = "mantle-Soghun"
+	icon_state = "mantle-unathi"
+	item_state = "mantle-unathi"
 	body_parts_covered = UPPER_TORSO
 
 //Taj clothing.

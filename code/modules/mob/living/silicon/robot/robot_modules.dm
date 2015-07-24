@@ -30,8 +30,8 @@
 		src.emag = new /obj/item/toy/sword(src)
 		src.emag.name = "Placeholder Emag Item"
 		return
-
-
+		
+		
 /obj/item/weapon/robot_module/proc/respawn_consumable(var/mob/living/silicon/robot/R)
 
 	if(!stacktypes || !stacktypes.len) return
@@ -60,7 +60,7 @@
 	//full set of languages
 	R.add_language("Sol Common", 1)
 	R.add_language("Tradeband", 0)
-	R.add_language("Sinta'Soghun", 0)
+	R.add_language("Sinta'unathi", 0)
 	R.add_language("Siik'Maas", 0)
 	R.add_language("Skrellian", 0)
 	R.add_language("Gutter", 0)
@@ -71,11 +71,11 @@
 	if (camera_network)
 		if(R.camera && "Robots" in R.camera.network)
 			R.camera.network.Add(camera_network)
-
+	
 
 /obj/item/weapon/robot_module/proc/add_sensor_modification(var/mob/living/silicon/robot/R)
 	R.sensor_mode=sensor_mode
-
+	
 
 /obj/item/weapon/robot_module/standard
 	name = "standard robot module"
@@ -323,8 +323,8 @@
 
 /obj/item/weapon/robot_module/butler
 	name = "service robot module"
-	sprites = list( "Waitress" = "Service",
-					"Kent" = "toiletbot",
+	sprites = list( "Waitress" = "Service", 
+					"Kent" = "toiletbot", 
 					"Bro" = "Brobot",
 					"Rich" = "maximillion",
 					"Default" = "Service2")
@@ -359,7 +359,7 @@
 	add_languages(var/mob/living/silicon/robot/R)
 		//full set of languages
 		R.add_language("Sol Common", 1)
-		R.add_language("Sinta'Soghun", 1)
+		R.add_language("Sinta'unathi", 1)
 		R.add_language("Siik'Maas", 1)
 		R.add_language("Skrellian", 1)
 		R.add_language("Rootspeak", 1)
@@ -368,8 +368,8 @@
 
 /obj/item/weapon/robot_module/clerical
 	name = "clerical robot module"
-	sprites = list( "Waitress" = "Service",
-					"Kent" = "toiletbot",
+	sprites = list( "Waitress" = "Service", 
+					"Kent" = "toiletbot", 
 					"Bro" = "Brobot",
 					"Rich" = "maximillion",
 					"Default" = "Service2")
@@ -384,7 +384,7 @@
 
 	add_languages(var/mob/living/silicon/robot/R)
 		R.add_language("Sol Common", 1)
-		R.add_language("Sinta'Soghun", 1)
+		R.add_language("Sinta'unathi", 1)
 		R.add_language("Siik'Maas", 1)
 		R.add_language("Skrellian", 1)
 		R.add_language("Rootspeak", 1)
