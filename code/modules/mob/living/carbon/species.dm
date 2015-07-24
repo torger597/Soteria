@@ -105,8 +105,8 @@
 			//H.jitteriness = 0
 			H.update_hair()
 	return
-	
-	
+
+
 /datum/species/proc/get_eye_icon()
 	return eyes
 
@@ -122,14 +122,14 @@
 	//If you wanted to add a species-level ability:
 	/*abilities = list(/client/proc/test_ability)*/
 
-/datum/species/unathi
-	name = "Unathi"
+/datum/species/soghun
+	name = "Soghun"
 	icobase = 'icons/mob/human_races/r_lizard.dmi'
 	deform = 'icons/mob/human_races/r_def_lizard.dmi'
-	language = "Sinta'unathi"
+	language = "Sinta'soghun"
 	tail = "sogtail"
 	unarmed_type = /datum/unarmed_attack/claws
-	primitive = /mob/living/carbon/monkey/unathi
+	primitive = /mob/living/carbon/monkey/soghun
 	darksight = 3
 
 	cold_level_1 = 280 //Default 260 - Lower is better
@@ -144,7 +144,7 @@
 
 	flesh_color = "#34AF10"
 
-	reagent_tag = IS_UNATHI
+	reagent_tag = IS_SOGHUN
 	base_color = "#066000"
 
 /datum/species/tajaran
@@ -333,9 +333,9 @@
 
 	blood_color = "#1F181F"
 	flesh_color = "#575757"
-	
+
 	var/brain_type = 'posibrain' // default is robots
-	
+
 
 //Species unarmed attacks
 

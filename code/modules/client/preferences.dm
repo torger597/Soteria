@@ -1128,9 +1128,9 @@ datum/preferences
 						b_hair = 0//hex2num(copytext(new_hair, 6, 8))
 
 						s_tone = 0
-						
+
 						organ_data = list()
-						
+
 
 				if("language")
 					var/languages_available
@@ -1227,7 +1227,7 @@ datum/preferences
 						s_tone = 35 - max(min( round(new_s_tone), 220),1)
 
 				if("skin")
-					if(species == "Unathi" || species == "Tajaran" || species == "Skrell" || species == "Machine")
+					if(species == "Soghun" || species == "Tajaran" || species == "Skrell" || species == "Machine")
 						var/new_skin = input(user, "Choose your character's skin colour: ", "Character Preference") as color|null
 						if(new_skin)
 							r_skin = hex2num(copytext(new_skin, 2, 4))
@@ -1270,7 +1270,7 @@ datum/preferences
 						covering_type=(new_coating!="None" ? new_coating : null)
 						h_style = random_hair_style(gender, get_hair_species())
 						f_style = random_facial_hair_style(gender, get_hair_species())
-						
+
 				if("limbs")
 					customize_limbs(user,species!="Machine")
 
