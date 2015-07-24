@@ -12,7 +12,7 @@
 			D.money += winner_sum
 
 			var/datum/transaction/T = new()
-			T.target_name = "Tau Ceti Daily Grand Slam -Stellar- Lottery"
+			T.target_name = "Andromeda Today! Grand Slam -Stellar- Lottery"
 			T.purpose = "Winner!"
 			T.amount = winner_sum
 			T.date = current_date_string
@@ -32,9 +32,9 @@
 		newMsg.body += "<br>Unfortunately, we were unable to verify the account details provided, so we were unable to transfer the money. Send a cheque containing the sum of $500 to TCD 'Stellar Slam' office on Biesel Prime containing updated details, and your winnings'll be resent within the month."
 
 	for(var/datum/feed_channel/FC in news_network.network_channels)
-		if(FC.channel_name == "Tau Ceti Daily")
+		if(FC.channel_name == "Andromeda Today!")
 			FC.messages += newMsg
 			break
 
 	for(var/obj/machinery/newscaster/NEWSCASTER in allCasters)
-		NEWSCASTER.newsAlert("Tau Ceti Daily")
+		NEWSCASTER.newsAlert("Andromeda Today!")
