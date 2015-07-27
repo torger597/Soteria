@@ -24,7 +24,7 @@ var/global/list/citizenship_choices = list(
 
 var/global/list/home_system_choices = list(
 	"Sol",
-	"Tau Ceti",
+	"Andromeda",
 	"Epsilon Ursae Majoris",
 	"Epsilon Eridani",
 	"Altair",
