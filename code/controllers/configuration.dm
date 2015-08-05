@@ -85,7 +85,7 @@
 	var/banappeals
 	var/wikiurl
 	var/forumurl
-	var/aurorawikiurl
+	var/Hypatiawikiurl
 	var/githuburl
 
 	//Alert level description
@@ -343,8 +343,8 @@
 				if ("forumurl")
 					config.forumurl = value
 
-				if ("aurorawikiurl")
-					config.aurorawikiurl = value
+				if ("Hypatiawikiurl")
+					config.Hypatiawikiurl = value
 
 				if ("githuburl")
 					config.githuburl = value

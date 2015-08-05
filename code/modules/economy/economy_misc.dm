@@ -78,7 +78,7 @@ var/global/economy_init = 0
 		return 2
 
 	var/datum/feed_channel/newChannel = new /datum/feed_channel
-	newChannel.channel_name = "Tau Ceti Daily"
+	newChannel.channel_name = "Andromeda Today!"
 	newChannel.author = "CentComm Minister of Information"
 	newChannel.locked = 1
 	newChannel.is_admin_channel = 1
@@ -87,6 +87,20 @@ var/global/economy_init = 0
 	newChannel = new /datum/feed_channel
 	newChannel.channel_name = "The Gibson Gazette"
 	newChannel.author = "Editor Mike Hammers"
+	newChannel.locked = 1
+	newChannel.is_admin_channel = 1
+	news_network.network_channels += newChannel
+
+	newChannel = new /datum/feed_channel
+	newChannel.channel_name = "InterGalactic News Network"
+	newChannel.author = "Editor Phillip Graves"
+	newChannel.locked = 1
+	newChannel.is_admin_channel = 1
+	news_network.network_channels += newChannel
+
+	newChannel = new /datum/feed_channel
+	newChannel.channel_name = "NanoTrasen Economic Report"
+	newChannel.author = "CentComm Minister of Information"
 	newChannel.locked = 1
 	newChannel.is_admin_channel = 1
 	news_network.network_channels += newChannel

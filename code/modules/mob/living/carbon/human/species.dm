@@ -345,16 +345,16 @@ See code\modules\mob\new_player\preferences_setup.dm for where it's used.
 	//If you wanted to add a species-level ability:
 	/*abilities = list(/client/proc/test_ability)*/
 
-/datum/species/unathi
-	name = "Unathi"
-	name_plural = "Unathi"
+/datum/species/soghun
+	name = "Soghun"
+	name_plural = "Soghun"
 	icobase = 'icons/mob/human_races/r_lizard.dmi'
 	deform = 'icons/mob/human_races/r_def_lizard.dmi'
-	language = "Sinta'unathi"
+	language = "Sinta'soghun"
 	tail = "sogtail"
 	unarmed_type = /datum/unarmed_attack/claws
 	secondary_unarmed_type = /datum/unarmed_attack/bite/strong
-	primitive = /mob/living/carbon/monkey/unathi
+	primitive = /mob/living/carbon/monkey/soghun
 	darksight = 3
 	gluttonous = 1
 
@@ -370,7 +370,7 @@ See code\modules\mob\new_player\preferences_setup.dm for where it's used.
 
 	flesh_color = "#34AF10"
 
-	reagent_tag = IS_UNATHI
+	reagent_tag = IS_SOGHUN
 	base_color = "#066000"
 
 /datum/species/tajaran
@@ -609,34 +609,6 @@ See code\modules\mob\new_player\preferences_setup.dm for where it's used.
 	if (istype(brain_datum))
 		if (isnull(brain_datum.machine_brain_type))
 			brain_datum.machine_brain_type="Posibrain"
-/*/datum/species/vulsarian
-	name = "Vulsarian"
-	icobase = 'icons/mob/human_races/r_vulsarian.dmi'
-	deform = 'icons/mob/human_races/r_vulsarian.dmi'
-	path = /mob/living/carbon/human/vulsarian
-	default_language = "Galactic Common"
-	language = "Canilunzt"
-	primitive_form = "Wolpin"
-	tail = "vulptail"
-	unarmed_type = /datum/unarmed_attack/claws
-	darksight = 8
-
-	blurb = "Vulsarian are a species of sharp-witted canine-pideds residing on the steampunk-like planet called Dotune ( which is just barely within the \
-    Andromeda System.) Their strict communist government and high society standards have led them to become a species and \
-    culture that is respected for their scientific breakthroughs. Honor, Loyalty and Dedication dominates their lifestyles \
-    to the degree it can cause conflict with more carefree co-workers. They speak a guttural language known as 'Canilunzt'."
-
-	flags = IS_WHITELISTED | HAS_LIPS | HAS_UNDERWEAR
-	bodyflags = FEET_PADDED | HAS_TAIL | HAS_SKIN_COLOR | TAIL_WAGGING
-	dietflags = DIET_OMNI
-
-	reagent_tag = PROCESS_ORG
-	flesh_color = "#966464"
-	base_color = "#BE8264"
-
-/datum/species/vulsarian/handle_death(var/mob/living/carbon/human/H)
-
-	H.stop_tail_wagging(1)*/
 
 
 /datum/species/bug
