@@ -2564,7 +2564,7 @@
 "aXp" = (/obj/machinery/alarm{locked = 1; pixel_y = 23},/obj/structure/flora/pottedplant{icon_state = "plant-22"},/turf/simulated/floor/wood,/area/security/detectives_office)
 "aXq" = (/turf/simulated/floor/wood,/area/security/detectives_office)
 "aXr" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/wood,/area/security/detectives_office)
-"aXs" = (/obj/structure/closet/secure_closet/detective,/obj/item/weapon/gun/projectile/detective,/obj/item/ammo_magazine/c38,/obj/item/ammo_magazine/c38,/obj/item/clothing/tie/holster,/obj/item/device/flash,/turf/simulated/floor/wood,/area/security/detectives_office)
+"aXs" = (/obj/structure/closet/secure_closet/detective,/obj/item/weapon/gun/projectile/detective,/obj/item/ammo_magazine/c38,/obj/item/ammo_magazine/c38,/obj/item/clothing/tie/holster,/obj/item/device/flash,/obj/item/clothing/glasses/sunglasses/sechud,/obj/item/weapon/storage/belt/security,/turf/simulated/floor/wood,/area/security/detectives_office)
 "aXt" = (/obj/structure/bookcase{name = "bookcase (Adult)"},/turf/simulated/floor/wood,/area/library)
 "aXu" = (/obj/structure/stool/bed/chair/comfy/black,/turf/simulated/floor/wood,/area/library)
 "aXv" = (/obj/structure/table/woodentable,/obj/item/device/flashlight/lamp/green{pixel_x = 1; pixel_y = 5},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{tag = "icon-intact-scrubbers (NORTH)"; icon_state = "intact-scrubbers"; dir = 1},/turf/simulated/floor/wood,/area/library)
