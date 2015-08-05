@@ -736,7 +736,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 				ui.close()
 				return 0
 
-//SQL/AURORA FUNCTIONS==================================
+//SQL/Hypatia FUNCTIONS==================================
 
 		if("View Directive")
 			queryid = sanitizeSQL(href_list["queryid"])
