@@ -389,6 +389,12 @@ var/list/ghostteleportlocs = list()
 	requires_power = 0
 	unlimited_power = 1
 
+/area/syndicate_mothership/merc_base
+	name = "\improper Merc Base"
+	icon_state = "syndie-ship"
+	requires_power = 0
+	unlimited_power = 1
+
 /area/syndicate_mothership/control
 	name = "\improper Syndicate Control Room"
 	icon_state = "syndie-control"
