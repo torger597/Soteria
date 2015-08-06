@@ -901,6 +901,7 @@
 #include "code\modules\clothing\under\color.dm"
 #include "code\modules\clothing\under\marine_armour.dm"
 #include "code\modules\clothing\under\marine_storage.dm"
+#include "code\modules\clothing\under\marine_uniforms.dm"
 #include "code\modules\clothing\under\miscellaneous.dm"
 #include "code\modules\clothing\under\shorts.dm"
 #include "code\modules\clothing\under\syndicate.dm"
