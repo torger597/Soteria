@@ -1,7 +1,7 @@
 /obj/item/clothing/under/mil
 	name = "Marine's uniform"
 	desc = "Wrong item - I shouldn't exist. Admin that spawned me, use /obj/item/clothing/under/mil/marine instead for Marines."
-	icon = "icons/mob/Marine_Uniforms.dmi"
+	icon = 'icons/mob/marineuniforms.dmi'
 	icon_state = "asmg_floor"
 	item_state = "bl_suit"
 	item_color = "amsg"
