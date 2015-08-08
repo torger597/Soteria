@@ -1,50 +1,101 @@
-/obj/item/weapon/gun/energy/rifle/laser/ertrifle
+/obj/item/weapon/gun/energy/automatic/rapidlaser/ertrifle
 	name = "ERR40"
 	desc = "The Emergency Response Rifle Model 40 is an advanced directed energy weapon capable of emitting highly focused energy which can kill or wound a human being."
-	icon_state = "laser"
-	item_state = "laser"
-	fire_sound = 'sound/weapons/Laser.ogg'
-	slot_flags = SLOT_BACK
+	icon = 'icons/mob/Marine_Weapons.dmi'
+	icon_state = "ERTRifle_kill"
+	fire_sound = 'sound/weapons/laser3.ogg'
+	origin_tech = "combat=5;materials=3;magnets=2"
+	projectile_type = "/obj/item/projectile/beam/xray/ERTrifle"
+	charge_cost = 25
 	w_class = 4
-	matter = list("metal" = 2000)
-	charge_cost = 25 //odd numbers due to a requirement to have 20 shots. Easiest way.
-	origin_tech = "combat=3;magnets=2"
-	projectile_type = "/obj/item/projectile/beam"
-	fire_delay_wielded = 0
-	fire_delay_unwielded = 6
-	force_wielded = 10 //10 is amped force, due to better grip
-	force_unwielded = 5 //5 is normal force
-	rangedrop = -5
 	var/mode = 1
 	projectiles_per_shot = 1
-
+	update_icon()
+		if(modifystate)
+			icon_state = "[modifystate]"
+		else
+			icon_state = "[initial(icon_state)]"
 	attack_self(mob/living/user as mob)
 		switch(mode)
 			if(0)
 				mode = 1
-				charge_cost = 100
+				charge_cost = 25
 				fire_sound = 'sound/weapons/Laser.ogg'
 				user << "\red [src.name] is now set to kill."
-				projectile_type = "/obj/item/projectile/beam"
-				modifystate = "energykill"
+				projectile_type = "/obj/item/projectile/beam/xray/ERTrifle"
+				modifystate = "ERTRifle_kill"
 			if(1)
 				mode = 0
-				charge_cost = 100
+				charge_cost = 25
 				fire_sound = 'sound/weapons/Taser.ogg'
 				user << "\red [src.name] is now set to stun."
 				projectile_type = "/obj/item/projectile/energy/electrode"
-				modifystate = "energystun"
+				modifystate = "ERTRifle_stun"
 		update_icon()
-/obj/item/weapon/gun/energy/rifle/laser/ertrifle/verb/toggle_burst()
-	set name = "Toggle Burst"
-	set category = "Object"
-
-	if (projectiles_per_shot == 3)
-		loc << "\red [src.name] is now set to single shot."
-		projectiles_per_shot = 1
-		fire_cooldown = 0
-	else
-		loc << "\red [src.name] is now set to fire in bursts."
-		projectiles_per_shot = 3
-		fire_cooldown = 1
+/obj/item/weapon/gun/energy/automatic/rapidlaser/ertsmg
+	name = "ERSG22"
+	desc = "The Emergency Response Submachine Gun Model 22 is a high firing directed energy weapon capable of quickly emitting highly focused energy which can kill or wound a human being."
+	icon = 'icons/mob/Marine_Weapons.dmi'
+	icon_state = "ERTSMG_kill"
+	fire_sound = 'sound/weapons/laser3.ogg'
+	origin_tech = "combat=5;materials=3;magnets=2"
+	projectile_type = "/obj/item/projectile/beam/xray/burst/ERTsmg"
+	charge_cost = 25
+	w_class = 4
+	var/mode = 1
 	update_icon()
+		if(modifystate)
+			icon_state = "[modifystate]"
+		else
+			icon_state = "[initial(icon_state)]"
+	attack_self(mob/living/user as mob)
+		switch(mode)
+			if(0)
+				mode = 1
+				charge_cost = 25
+				fire_sound = 'sound/weapons/Laser.ogg'
+				user << "\red [src.name] is now set to kill."
+				projectile_type = "/obj/item/projectile/beam/xray/burst/ERTsmg"
+				modifystate = "ERTSMG_kill"
+			if(1)
+				mode = 0
+				charge_cost = 25
+				fire_sound = 'sound/weapons/Taser.ogg'
+				user << "\red [src.name] is now set to stun."
+				projectile_type = "/obj/item/projectile/energy/electrode"
+				modifystate = "ERTSMG_stun"
+		update_icon()
+/obj/item/weapon/gun/energy/automatic/rapidlaser/ertpistol
+	name = "ERP11"
+	desc = "The Emergency Response Pistol Model 11 is a handheld energy weapon capable of emitting focused energy which can kill or wound a human being."
+	icon = 'icons/mob/Marine_Weapons.dmi'
+	icon_state = "ERTPistol_kill"
+	fire_sound = 'sound/weapons/laser3.ogg'
+	origin_tech = "combat=5;materials=3;magnets=2"
+	projectile_type = "/obj/item/projectile/beam"
+	charge_cost = 25
+	w_class = 4
+	var/mode = 1
+	projectiles_per_shot = 1
+	update_icon()
+		if(modifystate)
+			icon_state = "[modifystate]"
+		else
+			icon_state = "[initial(icon_state)]"
+	attack_self(mob/living/user as mob)
+		switch(mode)
+			if(0)
+				mode = 1
+				charge_cost = 25
+				fire_sound = 'sound/weapons/Laser.ogg'
+				user << "\red [src.name] is now set to kill."
+				projectile_type = "/obj/item/projectile/beam"
+				modifystate = "ERTPistol_kill"
+			if(1)
+				mode = 0
+				charge_cost = 25
+				fire_sound = 'sound/weapons/Taser.ogg'
+				user << "\red [src.name] is now set to stun."
+				projectile_type = "/obj/item/projectile/energy/electrode"
+				modifystate = "ERTPistol_stun"
+		update_icon()

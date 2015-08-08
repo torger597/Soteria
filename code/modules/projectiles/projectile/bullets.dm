@@ -86,6 +86,11 @@
 	damage = 25
 /obj/item/projectile/bullet/a65m55
 	damage = 23
+/obj/item/projectile/bullet/a40
+	damage = 30
+	stun = 5
+	weaken = 5
+	stutter = 10
 /obj/item/projectile/bullet/a127
 	damage = 40
 	stun = 5

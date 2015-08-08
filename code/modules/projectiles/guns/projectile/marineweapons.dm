@@ -17,6 +17,7 @@
 	fire_delay_unwielded = 14
 	force_wielded = 10
 	force_unwielded = 5
+	accuracy = -30
 	rangedrop = -5
 	load_method = MAGAZINE
 	isHandgun()
@@ -44,13 +45,17 @@
 	fire_cooldown = 0
 	projectiles_per_shot = 1
 	rangedrop = -2
-
 	New()
 		..()
 		empty_mag = new /obj/item/ammo_magazine/ak47mag/empty(src)
 		update_icon()
 		return
 
+/obj/item/weapon/gun/projectile/automatic/marine/ak47/ak447
+	name = "AK447"
+	desc = "A sleeker and more advanced version of the old AK47. Readily available on the black market it is popular among pirates and criminals. Fires 7.62mm ammunition."
+	icon_state = "AK447"
+	accuracy = -45
 
 	afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, flag)
 		..()
@@ -60,6 +65,7 @@
 			user.visible_message("<span class='rose'>Calmly, [user] reaches up and unloads, then drops the magazine from their AK-47 in one smooth movement.</span>")
 			update_icon()
 		return
+
 /obj/item/weapon/gun/projectile/automatic/marine/marinerifle
 	name = "MR246"
 	desc = "Slightly bulky but lightweight, this rifle is the standard NT Marine Assault Rifle. Firing with surprisingly low recoil, it is an effective assault weapon and is capable of selected fire modes. Fires 6.5x55mm ammunition."
@@ -69,6 +75,7 @@
 	caliber = "a65m55"
 	ammo_type = "/obj/item/ammo_casing/a65m55"
 	rangedrop = -4
+	accuracy = -60
 	fire_delay_unwielded = 12
 
 	New()
@@ -92,6 +99,7 @@
 	icon_state = "MarineRifle_adv"
 	w_class = 4.0
 	max_shells = 35
+	accuracy = -70
 	caliber = "a65m55"
 	New()
 		..()
@@ -116,6 +124,7 @@
 	item_state = "MarineSMG"
 	w_class = 3.0
 	max_shells = 25
+	accuracy = -65
 	caliber = ".45"
 	ammo_type = "/obj/item/ammo_casing/c45"
 	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
@@ -171,6 +180,7 @@
 	item_state = "MarineCarbine"
 	w_class = 3.0
 	max_shells = 30
+	accuracy = -70
 	origin_tech = "combat=6;materials=2"
 	caliber = "a65m55"
 	ammo_type = "/obj/item/ammo_casing/a65m55"
@@ -199,12 +209,55 @@
 	ammo_type = "/obj/item/ammo_casing/c45magnum"
 	automatic = 1
 	rangedrop = 0
+	accuracy = -80
 	load_method = MAGAZINE
 	isHandgun()
 		return 1
 	New()
 		..()
 		empty_mag = new /obj/item/ammo_magazine/marinepistolmag/empty(src)
+		update_icon()
+		return
+	afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, flag)
+		..()
+		if(!loaded.len && empty_mag)
+			empty_mag.loc = get_turf(src.loc)
+			empty_mag = null
+			playsound(user, 'sound/weapons/smg_empty_alarm.ogg', 40, 1)
+			update_icon()
+		return
+/obj/item/weapon/gun/projectile/automatic/marine/cbr4
+	name = "CB-R4"
+	desc = "A small, compact submachine gun that has a high rate of fire as well as high recoil due to firing .40 caliber rounds causing deadly kinetic damage."
+	max_shells = 20
+	icon_state = "CB-R4"
+	item_state = "MarineRifle
+	caliber = ".40"
+	ammo_type = "/obj/item/ammo_casing/a40"
+	New()
+		..()
+		empty_mag = new /obj/item/ammo_magazine/cb4rmag/empty(src)
+		update_icon()
+		return
+	afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, flag)
+		..()
+		if(!loaded.len && empty_mag)
+			empty_mag.loc = get_turf(src.loc)
+			empty_mag = null
+			playsound(user, 'sound/weapons/smg_empty_alarm.ogg', 40, 1)
+			update_icon()
+		return
+/obj/item/weapon/gun/projectile/automatic/marine/c15s
+	name = "C15s"
+	desc = "Modeled after the C20r this lightweight, fast firing SMG is well equipped for CQB but difficult to properly use and control. Fires 12mm rounds."
+	max_shells = 20
+	caliber = "12mm"
+	icon_state = "C15s"
+	item_state = "MarineCarbine"
+	ammo_type = "/obj/item/ammo_casing/a12mm"
+	New()
+		..()
+		empty_mag = new /obj/item/ammo_magazine/a12mm/empty(src)
 		update_icon()
 		return
 	afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, flag)
