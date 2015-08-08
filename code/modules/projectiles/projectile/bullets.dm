@@ -33,7 +33,7 @@
 	weaken = 5
 
 /obj/item/projectile/bullet/midbullet2
-	damage = 25
+	damage = 20
 
 /obj/item/projectile/bullet/incendiary
 	icon_state= "fireball"
