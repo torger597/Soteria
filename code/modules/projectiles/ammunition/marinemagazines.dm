@@ -1,7 +1,7 @@
 /obj/item/ammo_magazine/ak47mag
 	name = "magazine (7.62×39mm)"
 	icon = 'icons/mob/Marine_Weapons.dmi'
-	icon_state = "akmagplaceholder"
+	icon_state = "akplaceholdermag"
 	ammo_type = "/obj/item/ammo_casing/a762"
 	max_ammo = 30
 	multiple_sprites = 0
