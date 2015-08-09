@@ -53,7 +53,7 @@
 /obj/item/ammo_magazine/cbr4mag/empty
 	max_ammo = 0
 /obj/item/ammo_magazine/cdr11mag
-	name = "magazine (9mm)
+	name = "magazine (9mm)"
 	icon = 'icons/mob/Marine_Weapons.dmi'
 	icon_state = "MarinePistol_Mag"
 	ammo_type = "/obj/item/ammo_casing/c9mm"

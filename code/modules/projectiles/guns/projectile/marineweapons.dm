@@ -55,6 +55,7 @@
 	name = "AK447"
 	desc = "A sleeker and more advanced version of the old AK47. Readily available on the black market it is popular among pirates and criminals. Fires 7.62mm ammunition."
 	icon_state = "AK447"
+	item_state = "AK47"
 	accuracy = -45
 
 	afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, flag)
@@ -231,12 +232,12 @@
 	desc = "A small, compact submachine gun that has a high rate of fire as well as high recoil due to firing .40 caliber rounds causing deadly kinetic damage."
 	max_shells = 20
 	icon_state = "CB-R4"
-	item_state = "MarineRifle
+	item_state = "MarineRifle"
 	caliber = ".40"
 	ammo_type = "/obj/item/ammo_casing/a40"
 	New()
 		..()
-		empty_mag = new /obj/item/ammo_magazine/cb4rmag/empty(src)
+		empty_mag = new /obj/item/ammo_magazine/cbr4mag/empty(src)
 		update_icon()
 		return
 	afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, flag)
@@ -267,4 +268,37 @@
 			empty_mag = null
 			playsound(user, 'sound/weapons/smg_empty_alarm.ogg', 40, 1)
 			update_icon()
+		return
+/obj/item/weapon/gun/projectile/automatic/marine/crd11
+	name = "CRD-11"
+	desc = "A lightweight but clunky submachine gun commonly used by pirates and rebels alike due to its cheap construction costs and availablity in the black market. Fires 9mm rounds."
+	max_shells = 18
+	w_class = 2.0
+	caliber = "9mm"
+	icon_state = "OpFor SMG"
+	item_state = "spikethrower"//placeholder
+	ammo_type = "/obj/item/ammo_casing/c9mm"
+	New()
+		..()
+		empty_mag = new /obj/item/ammo_magazine/cdr11mag/empty(src)
+		update_icon()
+		return
+
+
+	afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, flag)
+		..()
+		if(!loaded.len && empty_mag)
+			empty_mag.loc = get_turf(src.loc)
+			empty_mag = null
+			playsound(user, 'sound/weapons/smg_empty_alarm.ogg', 40, 1)
+			update_icon()
+		return
+
+
+	update_icon()
+		..()
+		if(empty_mag)
+			icon_state = "OpFor SMG"
+		else
+			icon_state = "OpFor SMG-empty"
 		return

@@ -11,6 +11,6 @@
 	caliber = ".45 magnum"
 	projectile_type = "/obj/item/projectile/bullet"
 /obj/item/ammo_casing/a40
-	desc = "A .40 Caliber bullet casing.
-	Caliber = ".40"
+	desc = "A .40 Caliber bullet casing."
+	caliber = ".40"
 	projectile_type = "/obj/item/projectile/bullet/a40"

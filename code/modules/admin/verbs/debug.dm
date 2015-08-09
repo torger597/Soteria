@@ -566,9 +566,8 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		"nanotrasen officer",
 		"nanotrasen captain",
 		"shadowling",
-		"iac_medic"
-//		"nanotrasen marine"
-		)
+		"iac_medic",
+		"nanotrasen marine")
 	var/dresscode = input("Select dress for [M]", "Robust quick dress shop") as null|anything in dresspacks
 	if (isnull(dresscode))
 		return
@@ -1168,7 +1167,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			W.assignment = "IAC Worker"
 			W.registered_name = M.real_name
 			M.equip_to_slot_or_del(W, slot_wear_id)
-		/*if("nanotrasen marine")
+		if("nanotrasen marine")
 			M.equip_to_slot_or_del(new /obj/item/clothing/under/mil/marine(M), slot_w_uniform)
 			M.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/marinemed(M), slot_wear_suit)
 			M.equip_to_slot_or_del(new /obj/item/clothing/shoes/combat(M), slot_shoes)
@@ -1177,7 +1176,6 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			M.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/tactical/marine(M), slot_head)
 			M.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/security/marine(M), slot_belt)
 			M.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/marine(M), slot_back)
-
 			M.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/c20r(M), slot_in_backpack)
 			M.equip_to_slot_or_del(new /obj/item/ammo_magazine/a12mm(src), slot_in_backpack)
 			M.equip_to_slot_or_del(new /obj/item/weapon/storage/firstaid/regular(src), slot_in_backpack)
@@ -1186,12 +1184,12 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 
 			var/obj/item/weapon/card/id/W = new(M)
 			W.name = "[M.real_name]'s ID Card"
-			W.icon_state = "centcom"
+			W.icon_state = "Marine"
 			W.access = get_all_accesses()
 			W.access += get_all_centcom_access()
 			W.assignment = "Nanotrasen Marine"
 			W.registered_name = M.real_name
-			M.equip_to_slot_or_del(W, slot_wear_id)*/
+			M.equip_to_slot_or_del(W, slot_wear_id)
 
 	M.regenerate_icons()
 
