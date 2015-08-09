@@ -557,10 +557,10 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		"marisa wizard",
 		"protection detail",
 		"emergency response team",
-		"ert trooper",
-		"ert leading trooper",
-		"ert sub officer",
-		"ert commander",
+		"ert medical trooper",
+		"ert security trooper",
+		"ert field commander",
+		"ert engineer",
 		"nanotrasen representative",
 		"central command duty officer",
 		"nanotrasen officer",
@@ -905,9 +905,9 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			W.registered_name = M.real_name
 			M.equip_to_slot_or_del(W, slot_wear_id)
 
-		if("ert trooper")
-			M.equip_to_slot_or_del(new /obj/item/clothing/under/rank/ert/soldier(M), slot_w_uniform)
-			M.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ert_soldier(M), slot_wear_suit)
+		if("ert medical trooper")
+			M.equip_to_slot_or_del(new /obj/item/clothing/under/rank/ert/medic(M), slot_w_uniform)
+			M.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ert_medic(M), slot_wear_suit)
 			M.equip_to_slot_or_del(new /obj/item/clothing/shoes/swat(M), slot_shoes)
 			M.equip_to_slot_or_del(new /obj/item/clothing/gloves/swat(M), slot_gloves)
 			M.equip_to_slot_or_del(new /obj/item/device/radio/headset/ert(M), slot_l_ear)
@@ -920,13 +920,13 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			W.icon_state = "centcom"
 			W.access = get_all_accesses()
 			W.access += get_ert_access()
-			W.assignment = "ERT Trooper"
+			W.assignment = "ERT Medical Trooper"
 			W.registered_name = M.real_name
 			M.equip_to_slot_or_del(W, slot_wear_id)
 
-		if("ert leading trooper")
-			M.equip_to_slot_or_del(new /obj/item/clothing/under/rank/ert/nco(M), slot_w_uniform)
-			M.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ert_nco(M), slot_wear_suit)
+		if("ert security trooper")
+			M.equip_to_slot_or_del(new /obj/item/clothing/under/rank/ert/security(M), slot_w_uniform)
+			M.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ert_security(M), slot_wear_suit)
 			M.equip_to_slot_or_del(new /obj/item/clothing/shoes/swat(M), slot_shoes)
 			M.equip_to_slot_or_del(new /obj/item/clothing/gloves/swat(M), slot_gloves)
 			M.equip_to_slot_or_del(new /obj/item/device/radio/headset/ert(M), slot_l_ear)
@@ -939,32 +939,13 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			W.icon_state = "centcom"
 			W.access = get_all_accesses()
 			W.access += get_ert_access()
-			W.assignment = "ERT Leading Trooper"
+			W.assignment = "ERT Security Trooper"
 			W.registered_name = M.real_name
 			M.equip_to_slot_or_del(W, slot_wear_id)
 
-		if("ert sub officer")
-			M.equip_to_slot_or_del(new /obj/item/clothing/under/rank/ert/officer(M), slot_w_uniform)
-			M.equip_to_slot_or_del(new  /obj/item/clothing/suit/armor/vest/ert_officer(M), slot_wear_suit)
-			M.equip_to_slot_or_del(new /obj/item/clothing/shoes/swat(M), slot_shoes)
-			M.equip_to_slot_or_del(new /obj/item/clothing/gloves/swat(M), slot_gloves)
-			M.equip_to_slot_or_del(new /obj/item/device/radio/headset/ert(M), slot_l_ear)
-			M.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/gun(M), slot_belt)
-			M.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(M), slot_glasses)
-			M.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/ert(M), slot_back)
-
-			var/obj/item/weapon/card/id/W = new(M)
-			W.name = "[M.real_name]'s ID Card"
-			W.icon_state = "centcom"
-			W.access = get_all_accesses()
-			W.access += get_ert_access()
-			W.assignment = "ERT Sub-Officer"
-			W.registered_name = M.real_name
-			M.equip_to_slot_or_del(W, slot_wear_id)
-
-		if("ert commander")
+		if("ert field commander")
 			M.equip_to_slot_or_del(new /obj/item/clothing/under/rank/ert/commander(M), slot_w_uniform)
-			M.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ert_commander(M), slot_wear_suit)
+			M.equip_to_slot_or_del(new  /obj/item/clothing/suit/armor/vest/ert_commander(M), slot_wear_suit)
 			M.equip_to_slot_or_del(new /obj/item/clothing/shoes/swat(M), slot_shoes)
 			M.equip_to_slot_or_del(new /obj/item/clothing/gloves/swat(M), slot_gloves)
 			M.equip_to_slot_or_del(new /obj/item/device/radio/headset/ert(M), slot_l_ear)
@@ -977,7 +958,26 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			W.icon_state = "centcom"
 			W.access = get_all_accesses()
 			W.access += get_ert_access()
-			W.assignment = "ERT Commander"
+			W.assignment = "ERT Field Commander"
+			W.registered_name = M.real_name
+			M.equip_to_slot_or_del(W, slot_wear_id)
+
+		if("ert engineer")
+			M.equip_to_slot_or_del(new /obj/item/clothing/under/rank/ert/engineer(M), slot_w_uniform)
+			M.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ert_engineer(M), slot_wear_suit)
+			M.equip_to_slot_or_del(new /obj/item/clothing/shoes/swat(M), slot_shoes)
+			M.equip_to_slot_or_del(new /obj/item/clothing/gloves/swat(M), slot_gloves)
+			M.equip_to_slot_or_del(new /obj/item/device/radio/headset/ert(M), slot_l_ear)
+			M.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/gun(M), slot_belt)
+			M.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(M), slot_glasses)
+			M.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/ert(M), slot_back)
+
+			var/obj/item/weapon/card/id/W = new(M)
+			W.name = "[M.real_name]'s ID Card"
+			W.icon_state = "centcom"
+			W.access = get_all_accesses()
+			W.access += get_ert_access()
+			W.assignment = "ERT Engineer"
 			W.registered_name = M.real_name
 			M.equip_to_slot_or_del(W, slot_wear_id)
 
@@ -1190,6 +1190,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			W.assignment = "Nanotrasen Marine"
 			W.registered_name = M.real_name
 			M.equip_to_slot_or_del(W, slot_wear_id)
+
 
 	M.regenerate_icons()
 
