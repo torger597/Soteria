@@ -71,6 +71,7 @@
 	name = "MR246"
 	desc = "Slightly bulky but lightweight, this rifle is the standard NT Marine Assault Rifle. Firing with surprisingly low recoil, it is an effective assault weapon and is capable of selected fire modes. Fires 6.5x55mm ammunition."
 	icon_state = "MarineRifle"
+	item_state = "MarineRifle"
 	w_class = 4.0
 	max_shells = 35
 	caliber = "a65m55"
