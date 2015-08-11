@@ -101,14 +101,14 @@ var/list/beam_master = list()
 	damage = 30
 //	forcedodge = -1
 /obj/item/projectile/beam/xray/ERTrifle
-	damage = 40
+	damage = 30
 /obj/item/projectile/beam/xray/burst
 	name = "xray beam"
 	icon_state = "xray"
 //	damage = 15 this makes rapidlasers kill almost exactly as fast as the rifle, but since they do a tripleburst, armor is much more effective. plus. rng miss.
 	damage = 25
 /obj/item/projectile/beam/xray/burst/ERTsmg
-	damage = 35
+	damage = 25
 /obj/item/projectile/beam/pulse
 	name = "pulse"
 	icon_state = "u_laser"
