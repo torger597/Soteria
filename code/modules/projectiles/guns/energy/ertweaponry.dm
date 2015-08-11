@@ -77,6 +77,8 @@
 	w_class = 4
 	var/mode = 1
 	projectiles_per_shot = 1
+	isHandgun()
+		return 1
 	update_icon()
 		if(modifystate)
 			icon_state = "[modifystate]"

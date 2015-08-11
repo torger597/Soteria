@@ -495,7 +495,7 @@ var/global/datum/controller/occupations/job_master
 		if(istype(H)) //give humans wheelchairs, if they need them.
 			var/datum/organ/external/l_foot = H.get_organ("l_foot")
 			var/datum/organ/external/r_foot = H.get_organ("r_foot")
-			if((!l_foot || l_foot.status & ORGAN_DESTROYED) && (!r_foot || r_foot.status & ORGAN_DESTROYED))
+			if((!l_foot || l_foot.status & ORGAN_DESTROYED) || (!r_foot || r_foot.status & ORGAN_DESTROYED))
 				var/obj/structure/stool/bed/chair/wheelchair/W = new /obj/structure/stool/bed/chair/wheelchair(H.loc)
 				H.buckled = W
 				H.update_canmove()
