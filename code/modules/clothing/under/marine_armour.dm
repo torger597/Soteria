@@ -22,3 +22,9 @@
 	desc = "NT Marine light armor, generally worn in non-combat zones."
 	icon_state = "marine-armor-light"
 	item_state = "marine-armor-light"
+/obj/item/clothing/mask/gas/marine
+	name = "Marine Gas Mask"
+	desc = "Nanotrasen standard-issue gas-mask."
+	icon = 'icons/mob/marineuniforms.dmi'
+	icon_state = "MarineGasFloor"
+	item_state = "MarineGas"
