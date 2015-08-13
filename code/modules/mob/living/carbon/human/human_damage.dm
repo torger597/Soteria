@@ -346,6 +346,7 @@ This function restores all organs.
 */
 /mob/living/carbon/human/restore_all_organs()
 	for(var/datum/organ/external/current_organ in organs)
+		visible_message("Debug. [current_organ]")
 		current_organ.rejuvenate()
 
 /mob/living/carbon/human/proc/HealDamage(zone, brute, burn)
