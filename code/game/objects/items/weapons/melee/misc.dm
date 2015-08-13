@@ -22,6 +22,7 @@
 	item_state = "knife"
 	flags = FPRINT | TABLEPASS | CONDUCT
 	sharp = 1
+	edge = 1
 	force = 30
 	w_class = 3.0
 	throwforce = 20
