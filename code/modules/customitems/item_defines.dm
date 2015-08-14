@@ -1377,14 +1377,14 @@ END R I P HAZERI
 
 /obj/item/clothing/tie/marine_dogtags_fox // James Fox
 	name = "Lt. James Fox's dogtags"
-	desc = "James Fox, Lieutenant, NMV Manticore Research and Development"
+	desc = "James Fox, Lieutenant, NMV-BC Manticore Research and Development"
 	icon_state = "ert_tags"
 	item_color = "holobadge-cord"
 	slot_flags = SLOT_MASK
 	slot_flags = SLOT_BELT
 	var/rank = "Lt."
 	var/surname = "James Fox"
-	var/spec = "NMV Manticore"
+	var/spec = "NMV-BC Manticore"
 
 	attack_self(mob/user as mob)
 		if(isliving(user))
@@ -1392,14 +1392,14 @@ END R I P HAZERI
 
 /obj/item/clothing/tie/marine_dogtags_anders // Seneca Anders
 	name = "Lt. Seneca Anders' dogtags"
-	desc = "Seneca Anders, Lieutenant, NMV Manticore Chief Medical Officer"
+	desc = "Seneca Anders, Lieutenant, NMV-BC Manticore Chief Medical Officer"
 	icon_state = "ert_tags"
 	item_color = "holobadge-cord"
 	slot_flags = SLOT_MASK
 	slot_flags = SLOT_BELT
 	var/rank = "Cpl."
 	var/surname = "Seneca Anders"
-	var/spec = "NMV Manticore"
+	var/spec = "NMV-BC Manticore"
 
 	attack_self(mob/user as mob)
 		if(isliving(user))
@@ -1407,14 +1407,14 @@ END R I P HAZERI
 
 /obj/item/clothing/tie/marine_dogtags_rochette // Mirabelle Rochette
 	name = "Lt. Com. Mirabelle Rochette's dogtags"
-	desc = "Mirabelle Rochette, Lieutenant Commander, NMV Manticore Weapons Officer"
+	desc = "Mirabelle Rochette, Lieutenant Commander, NMV-BC Manticore Weapons Officer"
 	icon_state = "ert_tags"
 	item_color = "holobadge-cord"
 	slot_flags = SLOT_MASK
 	slot_flags = SLOT_BELT
-	var/rank = "Lt. Com."
+	var/rank = "Lt. Cdr."
 	var/surname = "Mirabelle Rochette"
-	var/spec = "NMV Manticore"
+	var/spec = "NMV-BC Manticore"
 
 	attack_self(mob/user as mob)
 		if(isliving(user))
@@ -1449,6 +1449,66 @@ END R I P HAZERI
 	attack_self(mob/user as mob)
 		if(isliving(user))
 			user.visible_message("\red [user] raises [src].\nThey read: [rank] [surname] - [spec] 3rd Platoon.","\red You raise [src].\nThey read: [rank] [surname] - [spec] 3rd Platoon.")
+
+/obj/item/clothing/tie/marine_dogtags_pthompson // Peter Thompson
+	name = "PFC Peter Thompson's dogtags"
+	desc = "Peter Thompson, Private First Class, 1st Squad 3rd Platoon"
+	icon_state = "ert_tags"
+	item_color = "holobadge-cord"
+	slot_flags = SLOT_MASK
+	slot_flags = SLOT_BELT
+	var/rank = "PFC"
+	var/surname = "Peter Thompson"
+	var/spec = "1st Squad"
+
+	attack_self(mob/user as mob)
+		if(isliving(user))
+			user.visible_message("\red [user] raises [src].\nThey read: [rank] [surname] - [spec] 3rd Platoon.","\red You raise [src].\nThey read: [rank] [surname] - [spec] 3rd Platoon.")
+
+/obj/item/clothing/tie/marine_dogtags_nash // Janette Nash
+	name = "Private Janette Nash's dogtags"
+	desc = "Janette Nash, Private, 2nd Squad 3rd Platoon"
+	icon_state = "ert_tags"
+	item_color = "holobadge-cord"
+	slot_flags = SLOT_MASK
+	slot_flags = SLOT_BELT
+	var/rank = "Pvt."
+	var/surname = "Janette Nash"
+	var/spec = "2nd Squad"
+
+	attack_self(mob/user as mob)
+		if(isliving(user))
+			user.visible_message("\red [user] raises [src].\nThey read: [rank] [surname] - [spec] 3rd Platoon.","\red You raise [src].\nThey read: [rank] [surname] - [spec] 3rd Platoon.")
+
+/obj/item/clothing/tie/marine_dogtags_blackfire // Julius Blackfire
+	name = "2Lt. Julius Blackfire's dogtags"
+	desc = "Julius Blackfire, Second Lieutenant, Platoon Leader 3rd Platoon"
+	icon_state = "ert_tags"
+	item_color = "holobadge-cord"
+	slot_flags = SLOT_MASK
+	slot_flags = SLOT_BELT
+	var/rank = "2Lt."
+	var/surname = "Julius Blackfire"
+	var/spec = "Platoon Leader"
+
+	attack_self(mob/user as mob)
+		if(isliving(user))
+			user.visible_message("\red [user] raises [src].\nThey read: [rank] [surname] - [spec] 3rd Platoon.","\red You raise [src].\nThey read: [rank] [surname] - [spec] 3rd Platoon.")
+
+/obj/item/clothing/tie/marine_dogtags_xanatos // Danielle Xanatos
+	name = "Cdr. Danielle Xanatos's dogtags"
+	desc = "Danielle Xanatos, Commander, NMV-BC Manticore Executive Officer"
+	icon_state = "ert_tags"
+	item_color = "holobadge-cord"
+	slot_flags = SLOT_MASK
+	slot_flags = SLOT_BELT
+	var/rank = "Cdr."
+	var/surname = "Danielle Xanatos"
+	var/spec = "Infantry Officer"
+
+	attack_self(mob/user as mob)
+		if(isliving(user))
+			user.visible_message("\red [user] raises [src].\nThey read: [rank] [surname] - [spec] Executive Officer.","\red You raise [src].\nThey read: [rank] [surname] - [spec] Executive Officer.")
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
