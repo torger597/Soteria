@@ -132,6 +132,38 @@
 	filling_color = "#C2C9FF"
 	plantname = "berries"
 
+/obj/item/weapon/reagent_containers/food/snacks/grown/strawberry
+	name = "strawberry"
+	desc = "Reminds you of summer."
+	icon_state = "strawberry"
+	potency = 25
+	filling_color = "#A2B5A1"
+	plantname = "strawberry"
+
+/obj/item/weapon/reagent_containers/food/snacks/grown/pear
+	name = "pear"
+	desc = "Don't look at them naked yoy Pear-vert."
+	icon_state = "pear"
+	potency = 25
+	filling_color = "#A2B5A1"
+	plantname = "pear"
+
+/obj/item/weapon/reagent_containers/food/snacks/grown/onion
+	name = "onion"
+	desc = "Well loved for their layers."
+	icon_state = "onion"
+	potency = 25
+	filling_color = "#A2B5A1"
+	plantname = "onion"
+
+/obj/item/weapon/reagent_containers/food/snacks/grown/ginger
+	name = "ginger"
+	desc = "The most knobbly of spices."
+	icon_state = "ginger"
+	potency = 25
+	filling_color = "#A2B5A1"
+	plantname = "ginger"
+
 /obj/item/weapon/reagent_containers/food/snacks/grown/plastellium
 	name = "clump of plastellium"
 	desc = "Hmm, needs some processing"
