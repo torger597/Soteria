@@ -534,20 +534,20 @@ proc/populate_gear_list()
 	path = /obj/item/clothing/head/beret/eng
 	cost = 1
 //	slot = slot_head
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer")
+	allowed_roles = list("Ship Engineer","Atmospheric Technician","Chief Engineer")
 
 /datum/gear/brown_vest
 	display_name = "brown webbing vest"
 	path = /obj/item/clothing/tie/storage/brown_vest
 	cost = 3
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer")
+	allowed_roles = list("Ship Engineer","Atmospheric Technician","Chief Engineer")
 
 /datum/gear/engineer_bandana
 	display_name = "engineering bandana"
 	path = /obj/item/clothing/head/helmet/greenbandana/fluff/taryn_kifer_1
 	cost = 2
 //	slot = slot_head
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer")
+	allowed_roles = list("Ship Engineer","Atmospheric Technician","Chief Engineer")
 
 //Science
 /datum/gear/scanning_goggles

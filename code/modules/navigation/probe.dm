@@ -1,5 +1,5 @@
 #define PROBE_AWAYZ 2          //Z-level of the Dock.
-#define PROBE_SHIPZ 1       //Z-level of the Station.
+#define PROBE_SHIPZ 1       //Z-level of the Ship.
 #define PROBE_AWAY_AREA "/area/probe/away" //Type of the supply shuttle area for sending away
 #define PROBE_HOME_AREA "/area/probe/station"	//Type of the supply shuttle area for dock
 
@@ -129,13 +129,15 @@
 		mix.volume = x.volume
 		for(var/datum/feature/y in ship.curplanet.features)
 			if(y.name == "Water")
-				mix.oxygen = (25*ONE_ATMOSPHERE)*(mix.volume)/(R_IDEAL_GAS_EQUATION*mix.temperature)
+				mix.adjust_gas("oxygen", (25*ONE_ATMOSPHERE)*(mix.volume)/(R_IDEAL_GAS_EQUATION*mix.temperature))
 			if(y.name == "Deuterium")
-				mix.toxins = (25*ONE_ATMOSPHERE)*(mix.volume)/(R_IDEAL_GAS_EQUATION*mix.temperature)
+				mix.adjust_gas("phoron", (25*ONE_ATMOSPHERE)*(mix.volume)/(R_IDEAL_GAS_EQUATION*mix.temperature))
 			if(y.name == "Plant Life"||y.name == "Animal Life" || y.name == "Intelligent Life")
-				mix.oxygen = (25*ONE_ATMOSPHERE)*(mix.volume)/(R_IDEAL_GAS_EQUATION*mix.temperature)
-				mix.nitrogen = (75*ONE_ATMOSPHERE)*(mix.volume)/(R_IDEAL_GAS_EQUATION*mix.temperature)
-				mix.carbon_dioxide = (1*ONE_ATMOSPHERE)*(mix.volume)/(R_IDEAL_GAS_EQUATION*mix.temperature)
+				mix.adjust_multi(
+					"oxygen", (25*ONE_ATMOSPHERE)*(mix.volume)/(R_IDEAL_GAS_EQUATION*mix.temperature),
+					"nitrogen", (75*ONE_ATMOSPHERE)*(mix.volume)/(R_IDEAL_GAS_EQUATION*mix.temperature),
+					"carbon_dioxide", (1*ONE_ATMOSPHERE)*(mix.volume)/(R_IDEAL_GAS_EQUATION*mix.temperature)
+				)
 		x.air_temporary = mix
 	//collect various reagents from your surrounding
 	for(var/obj/structure/reagent_dispensers/probe/x in locate(PROBE_AWAY_AREA))

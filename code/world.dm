@@ -41,6 +41,10 @@
 
 	. = ..()
 
+		//Should include Astronav stuff over here!! #JAMINICODEMARK
+	sun = new /datum/sun()
+	ship = new /datum/ship()
+
 	sleep_offline = 1
 
 	// Set up roundstart seed list. This is here because vendors were bugging out and not

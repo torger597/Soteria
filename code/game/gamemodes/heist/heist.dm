@@ -22,7 +22,7 @@ VOX HEIST ROUNDTYPE
 /datum/game_mode/heist/announce()
 	world << "<B>The current game mode is - Heist!</B>"
 	world << "<B>An unidentified bluespace signature has slipped past the Icarus and is approaching [station_name()]!</B>"
-	world << "Whoever they are, they're likely up to no good. Protect the crew and station resources against this dastardly threat!"
+	world << "Whoever they are, they're likely up to no good. Protect the crew and ship resources against this dastardly threat!"
 	world << "<B>Raiders:</B> Loot [station_name()] for anything and everything you need."
 	world << "<B>Personnel:</B> Repel the raiders and their low, low prices and/or crossbows."
 
@@ -224,7 +224,7 @@ VOX HEIST ROUNDTYPE
 			if(win_type == "Minor")
 
 				win_type = "Major"
-			win_msg += "<B>The Vox Raiders escaped the station!</B>"
+			win_msg += "<B>The Vox Raiders escaped the ship!</B>"
 		else
 			win_msg += "<B>The Vox Raiders were repelled!</B>"
 

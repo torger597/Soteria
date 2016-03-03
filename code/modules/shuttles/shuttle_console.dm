@@ -15,7 +15,7 @@
 	if(!allowed(user))
 		user << "\red Access Denied."
 		return 1
-	
+
 	ui_interact(user)
 
 /obj/machinery/computer/shuttle_control/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
@@ -36,7 +36,7 @@
 			if (shuttle.in_use)
 				shuttle_status = "Busy."
 			else if (!shuttle.location)
-				shuttle_status = "Standing-by at station."
+				shuttle_status = "Standing-by at ship."
 			else
 				shuttle_status = "Standing-by at offsite location."
 		if(WAIT_LAUNCH)

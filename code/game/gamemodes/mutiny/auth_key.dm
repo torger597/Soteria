@@ -25,7 +25,7 @@
 			time_entered_space = world.time
 		else if (in_space && time_entered_space + (10 SECONDS) < world.time)
 			// Time is up
-			radio.autosay("This device has left the station's perimeter. Triggering emergency activation failsafe.", name)
+			radio.autosay("This device has left the ship's perimeter. Triggering emergency activation failsafe.", name)
 			del(src)
 			return
 

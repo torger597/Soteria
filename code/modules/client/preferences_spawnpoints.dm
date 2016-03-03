@@ -12,8 +12,8 @@ var/list/spawntypes = list()
 	var/display_name //Name used in preference setup.
 
 /datum/spawnpoint/arrivals
-	display_name = "Arrivals Shuttle"
-	msg = "has arrived on the station"
+	display_name = "Cryogenic Storage"
+	msg = "has completely cryogenic revival"
 
 /datum/spawnpoint/arrivals/New()
 	..()

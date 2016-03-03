@@ -2,7 +2,7 @@
 	title = "AI"
 	flag = AI
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 0
 	spawn_positions = 1
 	selection_color = "#ccffcc"
@@ -20,7 +20,7 @@
 	title = "Cyborg"
 	flag = CYBORG
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 0
 	spawn_positions = 2
 	supervisors = "your laws and the AI"	//Nodrak

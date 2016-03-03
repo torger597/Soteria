@@ -83,12 +83,12 @@ var/global/datum/shuttle_controller/shuttle_controller
 	shuttle = new/datum/shuttle/ferry/escape_pod()
 	shuttle.location = 0
 	shuttle.warmup_time = 0
-	shuttle.area_station = locate(/area/shuttle/escape_pod5/station)
-	shuttle.area_offsite = locate(/area/shuttle/escape_pod5/centcom)
-	shuttle.area_transition = locate(/area/shuttle/escape_pod5/transit)
-	shuttle.docking_controller_tag = "escape_pod_5"
-	shuttle.dock_target_station = "escape_pod_5_berth"
-	shuttle.dock_target_offsite = "escape_pod_5_recovery"
+	shuttle.area_station = locate(/area/shuttle/escape_pod4/station)
+	shuttle.area_offsite = locate(/area/shuttle/escape_pod4/centcom)
+	shuttle.area_transition = locate(/area/shuttle/escape_pod4/transit)
+	shuttle.docking_controller_tag = "escape_pod_4"
+	shuttle.dock_target_station = "escape_pod_4_berth"
+	shuttle.dock_target_offsite = "escape_pod_4_recovery"
 	shuttle.transit_direction = EAST //should this be WEST? I have no idea.
 	shuttle.move_time = SHUTTLE_TRANSIT_DURATION_RETURN + rand(-30, 60)	//randomize this so it seems like the pods are being picked up one by one
 	process_shuttles += shuttle
@@ -100,7 +100,7 @@ var/global/datum/shuttle_controller/shuttle_controller
 		shuttles["Escape Pod 1"],
 		shuttles["Escape Pod 2"],
 		shuttles["Escape Pod 3"],
-		shuttles["Escape Pod 5"],
+		shuttles["Escape Pod 4"],
 	)
 
 	// Supply shuttle
@@ -204,7 +204,7 @@ var/global/datum/shuttle_controller/shuttle_controller
 		)
 
 	VS.announcer = "NSV Icarus"
-	VS.arrival_message = "Attention, Hypatia, we just tracked a small target bypassing our defensive perimeter. Can't fire on it without hitting the station - you've got incoming visitors, like it or not."
+	VS.arrival_message = "Attention, Hypatia, we just tracked a small target bypassing our defensive perimeter. Can't fire on it without hitting the ship - you've got incoming visitors, like it or not."
 	VS.departure_message = "Your guests are pulling away, Hypatia - moving too fast for us to draw a bead on them. Looks like they're heading out of the system at a rapid clip."
 	VS.interim = locate(/area/vox_station/transit)
 
@@ -216,14 +216,14 @@ var/global/datum/shuttle_controller/shuttle_controller
 	MS.origin = locate(/area/syndicate_station/start)
 
 	MS.destinations = list(
-		"Northwest of the station" = locate(/area/syndicate_station/northwest),
-		"North of the station" = locate(/area/syndicate_station/north),
-		"Northeast of the station" = locate(/area/syndicate_station/northeast),
-		"Southwest of the station" = locate(/area/syndicate_station/southwest),
-		"South of the station" = locate(/area/syndicate_station/south),
-		"Southeast of the station" = locate(/area/syndicate_station/southeast),
+		"Northwest of the ship" = locate(/area/syndicate_station/northwest),
+		"North of the ship" = locate(/area/syndicate_station/north),
+		"Northeast of the ship" = locate(/area/syndicate_station/northeast),
+		"Southwest of the ship" = locate(/area/syndicate_station/southwest),
+		"South of the ship" = locate(/area/syndicate_station/south),
+		"Southeast of the ship" = locate(/area/syndicate_station/southeast),
 		"Telecomms Satellite" = locate(/area/syndicate_station/commssat),
-		"NSS Hypatia Arrivals" = locate(/area/syndicate_station/arrivals),
+		"NEV Soteria Docking Clamp" = locate(/area/syndicate_station/arrivals),
 		"Mining Asteroid" = locate(/area/syndicate_station/mining)
 		)
 

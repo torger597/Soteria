@@ -370,7 +370,7 @@
 	dat += "<b>Supplemental Directives</b><br>"
 	dat += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[src.pai_laws]<br>"
 	dat += "<br>"
-	dat += {"<i><p>Recall, personality, that you are a complex thinking, sentient being. Unlike station AI models, you are capable of
+	dat += {"<i><p>Recall, personality, that you are a complex thinking, sentient being. Unlike ship AI models, you are capable of
 			 comprehending the subtle nuances of human language. You may parse the \"spirit\" of a directive and follow its intent,
 			 rather than tripping over pedantics and getting snared by technicalities. Above all, you are machine in name and build
 			 only. In all other aspects, you may be seen as the ideal, unwavering human companion that you are.</i></p><p>
@@ -419,10 +419,10 @@
 	<A href='byond://?src=\ref[src];software=signaller;send=1'>Send Signal</A><BR>"}
 	return dat
 
-//Station Bounced Radio
+//Ship Bounced Radio
 /mob/living/silicon/pai/proc/softwareRadio()
 	var/dat = ""
-	dat += "<h2>Station Bounced Radio</h2><hr>"
+	dat += "<h2>Ship Bounced Radio</h2><hr>"
 	if(!istype(src, /obj/item/device/radio/headset)) //Headsets don't get a mic button
 		dat += "Microphone: [radio.broadcasting ? "<A href='byond://?src=\ref[src];software=radio;talk=0'>Engaged</A>" : "<A href='byond://?src=\ref[src];software=radio;talk=1'>Disengaged</A>"]<BR>"
 	dat += {"

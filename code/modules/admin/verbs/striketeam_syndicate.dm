@@ -20,7 +20,7 @@ var/global/sent_syndicate_strike_team = 0
 		return
 	if(alert("Do you want to send in the Syndicate Strike Team? Once enabled, this is irreversible.",,"Yes","No")=="No")
 		return
-	alert("This 'mode' will go on until everyone is dead or the station is destroyed. You may also admin-call the evac shuttle when appropriate. Spawned syndicates have internals cameras which are viewable through a monitor inside the Syndicate Mothership Bridge. Assigning the team's detailed task is recommended from there. While you will be able to manually pick the candidates from active ghosts, their assignment in the squad will be random.")
+	alert("This 'mode' will go on until everyone is dead or the ship is destroyed. You may also admin-call the evac shuttle when appropriate. Spawned syndicates have internals cameras which are viewable through a monitor inside the Syndicate Mothership Bridge. Assigning the team's detailed task is recommended from there. While you will be able to manually pick the candidates from active ghosts, their assignment in the squad will be random.")
 
 	var/input = null
 	while(!input)
@@ -169,7 +169,7 @@ var/global/sent_syndicate_strike_team = 0
 	var/obj/item/weapon/card/id/syndicate/W = new(src) //Untrackable by AI
 	W.name = "[real_name]'s ID Card"
 	W.icon_state = "id"
-	W.access = get_all_accesses()//They get full station access because obviously the syndicate has HAAAX, and can make special IDs for their most elite members.
+	W.access = get_all_accesses()//They get full ship access because obviously the syndicate has HAAAX, and can make special IDs for their most elite members.
 	W.access += list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage, access_syndicate)//Let's add their forged CentCom access and syndicate access.
 	W.assignment = "Syndicate Commando"
 	W.registered_name = real_name

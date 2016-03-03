@@ -1,5 +1,5 @@
 // RUBY MODE
-// There is a weapon of some sort that spawns on the station
+// There is a weapon of some sort that spawns on the ship
 // It calls out to crew members in an effort to find a wielder
 // The wielder is made an abomination - they're given a grotesque mask and special powers
 // The Abomination wins by murdering the entire crew, then himself
@@ -51,10 +51,10 @@
 /datum/game_mode/ruby/declare_completion()
 	if(abominationwins)
 		feedback_set_details("round_end_result","win - abomination win")
-		world << "<B>The Abomination has murdered the station and sacrificed himself to Cjopaze!</B> (played by [winnerkey])"
+		world << "<B>The Abomination has murdered the ship and sacrificed himself to Cjopaze!</B> (played by [winnerkey])"
 	else
 		feedback_set_details("round_end_result","loss - abomination killed")
-		world << "<B>The Abomination has been stopped and Cjopaze's influence resisted! The station lives another day,</B>"
+		world << "<B>The Abomination has been stopped and Cjopaze's influence resisted! The ship lives another day,</B>"
 		if(killed.len > 0)
 			world << "Those who were sacrificed shall be remembered: "
 			for(var/mob/M in killed)

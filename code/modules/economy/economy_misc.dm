@@ -48,7 +48,7 @@
 
 //---- The following corporations are friendly with NanoTrasen and loosely enable trade and travel:
 //Corporation NanoTrasen - Generalised / high tech research and plasma exploitation.
-//Corporation Vessel Contracting - Ship and station construction, materials research.
+//Corporation Vessel Contracting - Ship and ship construction, materials research.
 //Corporation Osiris Atmospherics - Atmospherics machinery construction and chemical research.
 //Corporation Second Red Cross Society - 26th century Red Cross reborn as a dominating economic force in biomedical science (research and materials).
 //Corporation Blue Industries - High tech and high energy research, in particular into the mysteries of bluespace manipulation and power generation.
@@ -56,7 +56,7 @@
 //Corporation Free traders - Not so much a corporation as a loose coalition of spacers, Free Traders are a roving band of smugglers, traders and fringe elements following a rigid (if informal) code of loyalty and honour. Mistrusted by most corporations, they are tolerated because of their uncanny ability to smell out a profit.
 
 //---- Descriptions of destination types
-//Space stations can be purpose built for a number of different things, but generally require regular shipments of essential supplies.
+//Space ships can be purpose built for a number of different things, but generally require regular shipments of essential supplies.
 //Corvettes are small, fast warships generally assigned to border patrol or chasing down smugglers.
 //Battleships are large, heavy cruisers designed for slugging it out with other heavies or razing planets.
 //Yachts are fast civilian craft, often used for pleasure or smuggling.

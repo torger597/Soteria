@@ -2,7 +2,7 @@
 	title = "Research Director"
 	flag = RD
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the captain"
@@ -41,7 +41,7 @@
 	title = "Scientist"
 	flag = SCIENTIST
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 5
 	spawn_positions = 3
 	supervisors = "the research director"
@@ -71,7 +71,7 @@
 	title = "Xenobiologist"
 	flag = XENOBIOLOGIST
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the research director"
@@ -99,7 +99,7 @@
 	title = "Roboticist"
 	flag = ROBOTICIST
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "research director"

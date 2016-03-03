@@ -14,7 +14,7 @@
 
 /datum/game_mode/meteor/announce()
 	world << "<B>The current game mode is - Meteor!</B>"
-	world << "<B>The space station has been stuck in a major meteor shower. You must escape from the station or at least live.</B>"
+	world << "<B>The space ship has been stuck in a major meteor shower. You must escape from the ship or at least live.</B>"
 
 
 /datum/game_mode/meteor/post_setup()
@@ -47,7 +47,7 @@
 			switch(location.loc.type)
 				if( /area/shuttle/escape/centcom )
 					text += "<br><b><font size=2>[player.real_name] escaped on the emergency shuttle</font></b>"
-				if( /area/shuttle/escape_pod1/centcom, /area/shuttle/escape_pod2/centcom, /area/shuttle/escape_pod3/centcom, /area/shuttle/escape_pod5/centcom )
+				if( /area/shuttle/escape_pod1/centcom, /area/shuttle/escape_pod2/centcom, /area/shuttle/escape_pod3/centcom, /area/shuttle/escape_pod4/centcom )
 					text += "<br><font size=2>[player.real_name] escaped in a life pod.</font>"
 				else
 					text += "<br><font size=1>[player.real_name] survived but is stranded without any hope of rescue.</font>"

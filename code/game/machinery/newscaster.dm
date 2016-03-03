@@ -51,7 +51,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 
 /obj/machinery/newscaster
 	name = "newscaster"
-	desc = "A standard Nanotrasen-licensed newsfeed handler for use in commercial space stations. All the news you absolutely have no use for, in one place!"
+	desc = "A standard Nanotrasen-licensed newsfeed handler for use in commercial space ships. All the news you absolutely have no use for, in one place!"
 	icon = 'icons/obj/terminals.dmi'
 	icon_state = "newscaster_normal"
 	var/isbroken = 0  //1 if someone banged it with something heavy
@@ -293,7 +293,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 			if(9)
 				dat+="<B>[src.viewing_channel.channel_name]: </B><FONT SIZE=1>\[created by: <FONT COLOR='maroon'>[src.viewing_channel.author]</FONT>\]</FONT><HR>"
 				if(src.viewing_channel.censored)
-					dat+="<FONT COLOR='red'><B>ATTENTION: </B></FONT>This channel has been deemed as threatening to the welfare of the station, and marked with a Nanotrasen D-Notice.<BR>"
+					dat+="<FONT COLOR='red'><B>ATTENTION: </B></FONT>This channel has been deemed as threatening to the welfare of the ship, and marked with a Nanotrasen D-Notice.<BR>"
 					dat+="No further feed story additions are allowed while the D-Notice is in effect.</FONT><BR><BR>"
 				else
 					if( isemptylist(src.viewing_channel.messages) )
@@ -322,7 +322,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 				dat+="<BR><A href='?src=\ref[src];setScreen=[0]'>Cancel</A>"
 			if(11)
 				dat+="<B>Nanotrasen D-Notice Handler</B><HR>"
-				dat+="<FONT SIZE=1>A D-Notice is to be bestowed upon the channel if the handling Authority deems it as harmful for the station's"
+				dat+="<FONT SIZE=1>A D-Notice is to be bestowed upon the channel if the handling Authority deems it as harmful for the ship's"
 				dat+="morale, integrity or disciplinary behaviour. A D-Notice will render a channel unable to be updated by anyone, without deleting any feed"
 				dat+="stories it might contain at the time. You can lift a D-Notice if you have the required access at any time.</FONT><HR>"
 				if(isemptylist(news_network.network_channels))
@@ -346,9 +346,9 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 				dat+="<BR><A href='?src=\ref[src];setScreen=[10]'>Back</A>"
 			if(13)
 				dat+="<B>[src.viewing_channel.channel_name]: </B><FONT SIZE=1>\[ created by: <FONT COLOR='maroon'>[src.viewing_channel.author]</FONT> \]</FONT><BR>"
-				dat+="Channel messages listed below. If you deem them dangerous to the station, you can <A href='?src=\ref[src];toggle_d_notice=\ref[src.viewing_channel]'>Bestow a D-Notice upon the channel</A>.<HR>"
+				dat+="Channel messages listed below. If you deem them dangerous to the ship, you can <A href='?src=\ref[src];toggle_d_notice=\ref[src.viewing_channel]'>Bestow a D-Notice upon the channel</A>.<HR>"
 				if(src.viewing_channel.censored)
-					dat+="<FONT COLOR='red'><B>ATTENTION: </B></FONT>This channel has been deemed as threatening to the welfare of the station, and marked with a Nanotrasen D-Notice.<BR>"
+					dat+="<FONT COLOR='red'><B>ATTENTION: </B></FONT>This channel has been deemed as threatening to the welfare of the ship, and marked with a Nanotrasen D-Notice.<BR>"
 					dat+="No further feed story additions are allowed while the D-Notice is in effect.</FONT><BR><BR>"
 				else
 					if( isemptylist(src.viewing_channel.messages) )
@@ -396,7 +396,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 				dat+="<B>Wanted Issue successfully deleted from Circulation</B><BR>"
 				dat+="<BR><A href='?src=\ref[src];setScreen=[0]'>Return</A><BR>"
 			if(18)
-				dat+="<B><FONT COLOR ='maroon'>-- STATIONWIDE WANTED ISSUE --</B></FONT><BR><FONT SIZE=2>\[Submitted by: <FONT COLOR='green'>[news_network.wanted_issue.backup_author]</FONT>\]</FONT><HR>"
+				dat+="<B><FONT COLOR ='maroon'>-- SHIPWIDE WANTED ISSUE --</B></FONT><BR><FONT SIZE=2>\[Submitted by: <FONT COLOR='green'>[news_network.wanted_issue.backup_author]</FONT>\]</FONT><HR>"
 				dat+="<B>Criminal</B>: [news_network.wanted_issue.author]<BR>"
 				dat+="<B>Description</B>: [news_network.wanted_issue.body]<BR>"
 				dat+="<B>Photo:</B>: "
@@ -416,7 +416,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 				dat+="<FONT COLOR='maroon'>Unable to print newspaper. Insufficient paper. Please notify maintenance personnel to refill machine storage.</FONT><BR><BR>"
 				dat+="<A href='?src=\ref[src];setScreen=[0]'>Return</A>"
 			if(22)
-				dat += "<div align='center'><b>Station Directives<br>NanoTrasen<br>NSS Hypatia</b></div><br>"
+				dat += "<div align='center'><b>Ship Directives<br>NanoTrasen<br>NSS Hypatia</b></div><br>"
 
 				establish_db_connection()
 				if(!dbcon.IsConnected())
@@ -426,7 +426,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 				var/DBQuery/query = dbcon.NewQuery("SELECT id, name FROM ss13_directives")
 				query.Execute()
 				dat += "<div align='center'><table width='90%' cellpadding='2' cellspacing='0'>"
-				dat += "<tr><td colspan='3' bgcolor='white' align='center'><a href='?src=\ref[src];setScreen=[24]'>Regarding Station Directives</a><br></td></tr>"
+				dat += "<tr><td colspan='3' bgcolor='white' align='center'><a href='?src=\ref[src];setScreen=[24]'>Regarding Ship Directives</a><br></td></tr>"
 
 				while(query.NextRow())
 					var/id = text2num(query.item[1])
@@ -456,12 +456,12 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 				dat += "<br><div align='center'><a href='?src=\ref[src];setScreen=[22]'>Return to Index</a></div>"
 				dat += "<div align='center'><a href='?src=\ref[src];setScreen=[0]'>Return to Main Menu</a></div>"
 			if(24)
-				dat += "<div align='center'><b>Regarding Station Directives</b></div><hr>"
-				dat += "<div align='justify'>The Station Directives are a set of specific orders and directives issued and enforced aboard a specific NanoTrasen Corporation installation. This terminal provides access to orders and directives enforced aboard the <i>NSS Hypatia.</i> Note that these are only enforced upon NanoTrasen Employees, and not civilians or visitors, unless ruled otherwise by sector specific Central Command.<br><br>"
-				dat += "Overwriting power of general NanoTrasen Corporate Regulation is given to the Station Directives. Should a conflict emerge, the Station Directives active aboard the specific installation are to be adhered to, over Corporate Regulation.<br><br>"
-				dat += "Punishment for a violation of Station Directives should be escalated in the following fashion:<br><ul><li>Verbal warning, and citation. Ensure that the Employee is familiar with the Station Directives.</li><li>Charge of violating article i111 - Failure to Execute an Order - of NanoTrasen Corporate Regulation</li><li>Subsequent charge of violating article i206 - Neglect of Duty - of NanoTrasen Corporate Regulation, and review of Employee by the Employee's Head of Staff.</li><li>Subsequent failure to follow Station Directives should result in suspension of contract, if not imprisonment until transfer to Central Command station.</li></ul>"
-				dat += "Dependant on the violation and actual crimes concerned, punishment may be escalated faster, with intent to ensure in the safety of station, equipment and crew.<br>"
-				dat += "During non-standard operation, and highly abnormal circumstances, Station Directives may be overlooked, for the sake of a less costly solution to the given emergency. Note that should a follow-on review find this solution to have been more detrimental, and the breach of Directives and Regulation be unwarranted, then such an act will be punished.</div>"
+				dat += "<div align='center'><b>Regarding Ship Directives</b></div><hr>"
+				dat += "<div align='justify'>The Ship Directives are a set of specific orders and directives issued and enforced aboard a specific NanoTrasen Corporation installation. This terminal provides access to orders and directives enforced aboard the <i>NSS Hypatia.</i> Note that these are only enforced upon NanoTrasen Employees, and not civilians or visitors, unless ruled otherwise by sector specific Central Command.<br><br>"
+				dat += "Overwriting power of general NanoTrasen Corporate Regulation is given to the Ship Directives. Should a conflict emerge, the Ship Directives active aboard the specific installation are to be adhered to, over Corporate Regulation.<br><br>"
+				dat += "Punishment for a violation of Ship Directives should be escalated in the following fashion:<br><ul><li>Verbal warning, and citation. Ensure that the Employee is familiar with the Ship Directives.</li><li>Charge of violating article i111 - Failure to Execute an Order - of NanoTrasen Corporate Regulation</li><li>Subsequent charge of violating article i206 - Neglect of Duty - of NanoTrasen Corporate Regulation, and review of Employee by the Employee's Head of Staff.</li><li>Subsequent failure to follow Ship Directives should result in suspension of contract, if not imprisonment until transfer to Central Command station.</li></ul>"
+				dat += "Dependant on the violation and actual crimes concerned, punishment may be escalated faster, with intent to ensure in the safety of ship, equipment and crew.<br>"
+				dat += "During non-standard operation, and highly abnormal circumstances, Ship Directives may be overlooked, for the sake of a less costly solution to the given emergency. Note that should a follow-on review find this solution to have been more detrimental, and the breach of Directives and Regulation be unwarranted, then such an act will be punished.</div>"
 				dat += "<br><div align='center'><a href='?src=\ref[src];setScreen=[22]'>Return to Index</a></div>"
 				dat += "<div align='center'><a href='?src=\ref[src];setScreen=[0]'>Return to Main Menu</a></div>"
 			else
@@ -832,7 +832,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 
 /obj/item/weapon/newspaper
 	name = "newspaper"
-	desc = "An issue of The Griffon, the newspaper circulating aboard Nanotrasen Space Stations."
+	desc = "An issue of The Griffon, the newspaper circulating aboard Nanotrasen Space Ships."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "newspaper"
 	w_class = 2	//Let's make it fit in trashbags!
@@ -883,7 +883,7 @@ obj/item/weapon/newspaper/attack_self(mob/user as mob)
 				var/datum/feed_channel/C = src.news_content[src.curr_page]
 				dat+="<FONT SIZE=4><B>[C.channel_name]</B></FONT><FONT SIZE=1> \[created by: <FONT COLOR='maroon'>[C.author]</FONT>\]</FONT><BR><BR>"
 				if(C.censored)
-					dat+="This channel was deemed dangerous to the general welfare of the station and therefore marked with a <B><FONT COLOR='red'>D-Notice</B></FONT>. Its contents were not transferred to the newspaper at the time of printing."
+					dat+="This channel was deemed dangerous to the general welfare of the ship and therefore marked with a <B><FONT COLOR='red'>D-Notice</B></FONT>. Its contents were not transferred to the newspaper at the time of printing."
 				else
 					if(isemptylist(C.messages))
 						dat+="No Feed stories stem from this channel..."

@@ -201,17 +201,17 @@ var/list/ghostteleportlocs = list()
 /area/shuttle/escape_pod3/transit
 	icon_state = "shuttle"
 
-/area/shuttle/escape_pod5 //Pod 4 was lost to meteors
-	name = "\improper Escape Pod Five"
+/area/shuttle/escape_pod4
+	name = "\improper Escape Pod Four"
 	music = "music/escape.ogg"
 
-/area/shuttle/escape_pod5/station
+/area/shuttle/escape_pod4/station
 	icon_state = "shuttle2"
 
-/area/shuttle/escape_pod5/centcom
+/area/shuttle/escape_pod4/centcom
 	icon_state = "shuttle"
 
-/area/shuttle/escape_pod5/transit
+/area/shuttle/escape_pod4/transit
 	icon_state = "shuttle"
 
 /area/shuttle/mining
@@ -1861,6 +1861,25 @@ var/list/ghostteleportlocs = list()
 
 
 // Away Missions
+
+//All random zones need to be equal in size
+/area/randomzones/homemap //This is placed on your randomly selectable locations on the HOME map.Each one needs to be labeled with a seperate zonenum on map generation
+	name = "\improper Strange Location"
+
+/area/randomzones/homemap/shipwreak1
+/area/randomzones/homemap/shipwreak2
+/area/randomzones/homemap/shipwreak3
+/area/randomzones/homemap/shipwreak4
+/area/randomzones/homemap/shipwreak5
+
+/area/randomzones/awaymap //This zone goes on your away map. Each zone will randomly select a valid zonenumber from the availible home maps.
+	name = "\improper Strange Location"
+	icon_state = "away"
+/area/randomzones/awaymap/away1
+/area/randomzones/awaymap/away2
+/area/randomzones/awaymap/away3
+/area/randomzones/awaymap/away4
+/area/randomzones/awaymap/away5
 /area/awaymission
 	name = "\improper Strange Location"
 	icon_state = "away"
@@ -1951,6 +1970,19 @@ var/list/ghostteleportlocs = list()
 	icon_state = "away"
 	requires_power = 0
 
+/area/awaymission/landing
+	name = "\improper Landing Zone"
+	icon_state = "null"
+	luminosity = 1
+	lighting_use_dynamic = 0
+	requires_power = 0
+/area/awaymission/habit
+	name = "Planet"
+	icon_state = "null"
+	luminosity = 1
+	lighting_use_dynamic = 0
+	requires_power = 0
+
 /area/awaymission/beach
 	name = "Beach"
 	icon_state = "null"
@@ -2020,7 +2052,7 @@ var/list/centcom_areas = list (
 	/area/shuttle/escape_pod1/centcom,
 	/area/shuttle/escape_pod2/centcom,
 	/area/shuttle/escape_pod3/centcom,
-	/area/shuttle/escape_pod5/centcom,
+	/area/shuttle/escape_pod4/centcom,
 	/area/shuttle/transport1/centcom,
 	/area/shuttle/administration/centcom,
 	/area/shuttle/specops/centcom,
@@ -2033,7 +2065,7 @@ var/list/the_station_areas = list (
 	/area/shuttle/escape_pod1/station,
 	/area/shuttle/escape_pod2/station,
 	/area/shuttle/escape_pod3/station,
-	/area/shuttle/escape_pod5/station,
+	/area/shuttle/escape_pod4/station,
 	/area/shuttle/mining/station,
 	/area/shuttle/transport1/station,
 	// /area/shuttle/transport2/station,

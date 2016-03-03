@@ -3342,7 +3342,7 @@ datum
 		ethanol/specialwhiskey
 			name = "Special Blend Whiskey"
 			id = "specialwhiskey"
-			description = "Just when you thought regular station whiskey was good... This silky, amber goodness has to come along and ruin everything."
+			description = "Just when you thought regular ship whiskey was good... This silky, amber goodness has to come along and ruin everything."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 2
 			dizzy_adj = 4
@@ -3737,7 +3737,7 @@ datum
 		ethanol/manhattan_proj
 			name = "Manhattan Project"
 			id = "manhattan_proj"
-			description = "A scientist's drink of choice, for pondering ways to blow up the station."
+			description = "A scientist's drink of choice, for pondering ways to blow up the ship."
 			color = "#664300" // rgb: 102, 67, 0
 			boozepwr = 5
 

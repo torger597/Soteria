@@ -558,7 +558,7 @@ var/global/datum/tension/tension_master
 
 				if(nuke_spawn)
 					var/obj/item/weapon/paper/P = new
-					P.info = "Sadly, the Syndicate could not get you a nuclear bomb.  We have, however, acquired the arming code for the station's onboard nuke.  The nuclear authorization code is: <b>[nuke_code]</b>"
+					P.info = "Sadly, the Syndicate could not get you a nuclear bomb.  We have, however, acquired the arming code for the ship's onboard nuke.  The nuclear authorization code is: <b>[nuke_code]</b>"
 					P.name = "nuclear bomb code and instructions"
 					P.loc = nuke_spawn.loc
 
@@ -614,9 +614,9 @@ var/global/datum/tension/tension_master
 		var/list/mob/dead/observer/candidates = list()
 		var/mob/dead/observer/theghost = null
 		var/time_passed = world.time
-		var/input = "Purify the station."
+		var/input = "Purify the ship."
 		if(prob(10))
-			input = "Save Runtime and any other cute things on the station."
+			input = "Save Runtime and any other cute things on the ship."
 	/*
 		if (emergency_shuttle.direction == 1 && emergency_shuttle.online == 1)
 			emergency_shuttle.recall()
@@ -873,4 +873,4 @@ var/global/datum/tension/tension_master
 		for(var/obj/machinery/door/poddoor/P in end_location)
 			P.open()
 		jumpcomplete = 1
-		command_alert("DRADIS contact!  Set condition one throughout the station!")
+		command_alert("DRADIS contact!  Set condition one throughout the ship!")

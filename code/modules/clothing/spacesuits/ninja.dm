@@ -25,7 +25,7 @@
 	var/obj/item/weapon/cell/cell//Starts out with a high-capacity cell using New().
 	var/datum/effect/effect/system/spark_spread/spark_system//To create sparks.
 	var/reagent_list[] = list("tricordrazine","dexalinp","spaceacillin","anti_toxin","nutriment","radium","hyronalin")//The reagents ids which are added to the suit at New().
-	var/stored_research[]//For stealing station research.
+	var/stored_research[]//For stealing ship research.
 	var/obj/item/weapon/disk/tech_disk/t_disk//To copy design onto disk.
 
 		//Other articles of ninja gear worn together, used to easily reference them after initializing.

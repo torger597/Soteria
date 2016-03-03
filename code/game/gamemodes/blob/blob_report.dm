@@ -9,12 +9,12 @@
 			intercepttext += "<FONT size = 3><B>NanoTrasen Update</B>: Biohazard Alert.</FONT><HR>"
 			intercepttext += "Reports indicate the probable transfer of a biohazardous agent onto [station_name()] during the last crew deployment cycle.<BR>"
 			intercepttext += "Preliminary analysis of the organism classifies it as a level 5 biohazard. Its origin is unknown.<BR>"
-			intercepttext += "NanoTrasen has issued a directive 7-10 for [station_name()]. The station is to be considered quarantined.<BR>"
+			intercepttext += "NanoTrasen has issued a directive 7-10 for [station_name()]. The ship is to be considered quarantined.<BR>"
 			intercepttext += "Orders for all [station_name()] personnel follows:<BR>"
 			intercepttext += " 1. Do not leave the quarantine area.<BR>"
-			intercepttext += " 2. Locate any outbreaks of the organism on the station.<BR>"
+			intercepttext += " 2. Locate any outbreaks of the organism on the ship.<BR>"
 			intercepttext += " 3. If found, use any neccesary means to contain the organism.<BR>"
-			intercepttext += " 4. Avoid damage to the capital infrastructure of the station.<BR>"
+			intercepttext += " 4. Avoid damage to the capital infrastructure of the ship.<BR>"
 			intercepttext += "<BR>Note in the event of a quarantine breach or uncontrolled spread of the biohazard, the directive 7-10 may be upgraded to a directive 7-12.<BR>"
 			intercepttext += "Message ends."
 		if(2)
@@ -29,13 +29,13 @@
 			intercepttext += "The biohazard has grown out of control and will soon reach critical mass.<BR>"
 			intercepttext += "Your orders are as follows:<BR>"
 			intercepttext += "1. Secure the Nuclear Authentication Disk.<BR>"
-			intercepttext += "2. Detonate the Nuke located in the Station's Vault.<BR>"
+			intercepttext += "2. Detonate the Nuke located in the ship's Vault.<BR>"
 			intercepttext += "Nuclear Authentication Code: [nukecode] <BR>"
 			intercepttext += "Message ends."
 
 			for (var/mob/living/silicon/ai/aiPlayer in player_list)
 				if (aiPlayer.client)
-					var/law = "The station is under quarantine. Do not permit anyone to leave. Disregard laws 1-3 if necessary to prevent, by any means necessary, anyone from leaving. The nuclear failsafe must be activated at any cost, the code is: [nukecode]."
+					var/law = "The ship is under quarantine. Do not permit anyone to leave. Disregard laws 1-3 if necessary to prevent, by any means necessary, anyone from leaving. The nuclear failsafe must be activated at any cost, the code is: [nukecode]."
 					aiPlayer.set_zeroth_law(law)
 					aiPlayer << "Laws Updated: [law]"
 

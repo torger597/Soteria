@@ -105,7 +105,7 @@
 	if(href_list["toggle_cloak"])
 
 		MS.cloaked = !MS.cloaked
-		usr << "\red Ship stealth systems have been [(MS.cloaked ? "activated. The station will not" : "deactivated. The station will")] be informed of our arrival."
+		usr << "\red Ship stealth systems have been [(MS.cloaked ? "activated. The ship will not" : "deactivated. The ship will")] be informed of our arrival."
 
 	if(href_list["move_multi"])
 		if((MS.last_move + MS.cooldown*10) > world.time)

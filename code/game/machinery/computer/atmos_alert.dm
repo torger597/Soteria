@@ -3,7 +3,7 @@
 
 /obj/machinery/computer/atmos_alert
 	name = "Atmospheric Alert Computer"
-	desc = "Used to access the station's atmospheric sensors."
+	desc = "Used to access the ship's atmospheric sensors."
 	circuit = "/obj/item/weapon/circuitboard/atmos_alert"
 	icon_state = "alert:0"
 	var/list/priority_alarms = list()

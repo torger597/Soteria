@@ -1,7 +1,7 @@
 datum/directive/terminations/alien_fraud
 	special_orders = list(
 		"Suspend financial accounts of all Tajaran and Unathi personnel.",
-		"Transfer their payrolls to the station account.",
+		"Transfer their payrolls to the ship account.",
 		"Terminate their employment.")
 
 	proc/is_alien(mob/M)

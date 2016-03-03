@@ -2,7 +2,7 @@
 	title = "Safety Administrator"
 	flag = HOS
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the captain"
@@ -34,7 +34,7 @@
 	title = "Correctional Advisor"
 	flag = WARDEN
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the safety administrator"
@@ -63,7 +63,7 @@
 	title = "Detective"
 	flag = DETECTIVE
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the safety administrator"
@@ -100,7 +100,7 @@
 	title = "Crew Supervisor"
 	flag = OFFICER
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 5
 	spawn_positions = 5
 	supervisors = "the safety administrator"
@@ -127,7 +127,7 @@
 	title = "Head of Personnel"
 	flag = HOP
 	department_flag = CIVILIAN
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the captain"

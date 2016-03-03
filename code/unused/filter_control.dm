@@ -79,7 +79,7 @@
 		for (var/i = 1; i <= gases.len; i++)
 			dat += "[gases[i]]: <A HREF='?src=\ref[src];tg=[1 << (i - 1)]'>[(src.f_mask & 1 << (i - 1)) ? "Siphoning" : "Passing"]</A><BR>\n"
 	else
-		dat += "<big><font color='red'>Warning! Severe Internal Memory Corruption!</big><BR>\n<BR>\nConsult a qualified station technician immediately!</font><BR>\n"
+		dat += "<big><font color='red'>Warning! Severe Internal Memory Corruption!</big><BR>\n<BR>\nConsult a qualified ship technician immediately!</font><BR>\n"
 		dat += "<BR>\n<small>Error codes: 0x0000001E 0x0000007B</small><BR>\n"
 
 	dat += "<BR>\n<A href='?src=\ref[src];close=1'>Close</A><BR>\n"

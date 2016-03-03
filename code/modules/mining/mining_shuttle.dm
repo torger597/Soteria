@@ -89,7 +89,7 @@ proc/move_mining_shuttle()
 	if(mining_shuttle_moving)
 		dat += "Location: <font color='red'>Moving</font> <br>"
 	else
-		dat += "Location: [mining_shuttle_location ? "Outpost" : "Station"] <br>"
+		dat += "Location: [mining_shuttle_location ? "Outpost" : "Ship"] <br>"
 
 	dat += "<b><A href='?src=\ref[src];move=[1]'>Send</A></b></center>"
 

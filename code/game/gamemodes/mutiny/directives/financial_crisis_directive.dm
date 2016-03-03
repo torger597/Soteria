@@ -1,7 +1,7 @@
 datum/directive/terminations/financial_crisis
 	special_orders = list(
 		"Suspend financial accounts of all civilian personnel, excluding the Head of Personnel.",
-		"Transfer their payrolls to the station account.",
+		"Transfer their payrolls to the ship account.",
 		"Terminate their employment.")
 
 datum/directive/terminations/financial_crisis/get_crew_to_terminate()

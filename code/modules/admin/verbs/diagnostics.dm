@@ -29,8 +29,8 @@
 	Groups: [air_master.zones.len]<BR>
 ---- <I>Active:</I> [active_groups]<BR>
 ---- <I>Inactive:</I> [inactive_groups]<BR><br>
----- <I>Active on station:</i> [active_on_main_station]<br>
----- <i>Inactive on station:</i> [inactive_on_main_station]<br>
+---- <I>Active on ship:</i> [active_on_main_station]<br>
+---- <i>Inactive on ship:</i> [inactive_on_main_station]<br>
 <BR>
 <B>Special Processing Data</B><BR>
 	Hotspot Processing: [hotspots]<BR>

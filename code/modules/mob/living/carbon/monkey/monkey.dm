@@ -8,7 +8,7 @@
 	pass_flags = PASSTABLE
 	update_icon = 0		///no need to call regenerate_icon
 
-	var/obj/item/weapon/card/id/wear_id = null // Fix for station bounced radios -- Skie
+	var/obj/item/weapon/card/id/wear_id = null // Fix for ship bounced radios -- Skie
 	var/greaterform = "Human"                  // Used when humanizing a monkey.
 	icon_state = "monkey1"
 	//var/uni_append = "12C4E2"                // Small appearance modifier for different species.

@@ -62,20 +62,20 @@
 		//Drone Control
 /obj/machinery/computer/drone_control/military
 	name = "Maintenance Drone Control"
-	desc = "Used to monitor the station's drone population and the assembler that services them."
+	desc = "Used to monitor the ship's drone population and the assembler that services them."
 	icon = 'icons/obj/militarycomputers.dmi'
 	icon_state = "dronecontrol"
 
 		//Power Monitor
 /obj/machinery/power/monitor/military
 	name = "power monitoring computer"
-	desc = "It monitors power levels across the station."
+	desc = "It monitors power levels across the ship."
 	icon = 'icons/obj/militarycomputers.dmi'
 	icon_state = "powermonitor"
 
 		//Alerts
 /obj/machinery/computer/station_alert/military
-	name = "Station Alert Computer"
-	desc = "Used to access the station's automated alert system."
+	name = "Ship Alert Computer"
+	desc = "Used to access the ship's automated alert system."
 	icon = 'icons/obj/militarycomputers.dmi'
 	icon_state = "alert:0"

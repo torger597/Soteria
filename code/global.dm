@@ -81,11 +81,11 @@ var/blobevent = 0
 var/diary = null
 var/diaryofmeanpeople = null
 var/href_logfile = null
-var/station_name = "NSS Hypatia"
+var/station_name = "NEV Soteria"
 var/game_version = "Baystation12"
 var/changelog_hash = ""
 var/game_year = (text2num(time2text(world.realtime, "YYYY")) + 1001)
-var/forum_link = "http://Hypatiastation.org/forums/"
+var/forum_link = "http://soteria.phy.sx"
 
 var/datum/air_tunnel/air_tunnel1/SS13_airtunnel = null
 var/going = 1.0
@@ -168,6 +168,7 @@ var/list/reverse_dir = list(2, 1, 3, 8, 10, 9, 11, 4, 6, 5, 7, 12, 14, 13, 15, 3
 var/datum/station_state/start_state = null
 var/datum/configuration/config = null
 var/datum/sun/sun = null
+var/datum/ship/ship = null
 
 var/list/combatlog = list()
 var/list/IClog = list()
@@ -224,7 +225,9 @@ var/list/AAlarmWireColorToIndex
 #define shuttle_time_to_arrive 6000 // 10 minutes to arrive
 
 	//away missions
-var/list/awaydestinations = list()	//a list of landmarks that the warpgate can take you to
+var/awayZLevel = 7 //Hardcoding this for now. Add it to config later. This determines what Z-level away missions take place on.
+var/onPlanet = 0 //Toggles when we are on-planet. You can't launch the away shuttle if we are not
+var/shuttleAway = 0 //Toggled when the shuttle is away. You can't leave orbit without the shuttle on the ship!
 
 	// MySQL configuration
 

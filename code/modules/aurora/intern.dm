@@ -2,7 +2,7 @@
 	title = "Security Cadet"
 	flag = INTERN_SEC
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Head of Security"
@@ -30,7 +30,7 @@
 	title = "Nursing Intern"
 	flag = INTERN_MED
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Chief Medical Officer"
@@ -57,7 +57,7 @@
 	title = "Lab Assistant"
 	flag = INTERN_SCI
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Research Director"
@@ -81,7 +81,7 @@
 	title = "Engineering Apprentice"
 	flag = INTERN_ENG
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Chief Engineer"

@@ -1,6 +1,6 @@
 // AI EYE
 //
-// An invisible (no icon) mob that the AI controls to look around the station with.
+// An invisible (no icon) mob that the AI controls to look around the ship with.
 // It streams chunks as it moves around, which will show it what the AI can and cannot see.
 
 /mob/aiEye

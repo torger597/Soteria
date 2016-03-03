@@ -250,8 +250,8 @@
 			return "Engineering"
 		if(5) //command
 			return "Command"
-		if(6) //station general
-			return "Station General"
+		if(6) //ship general
+			return "Ship General"
 		if(7) //supply
 			return "Supply"
 

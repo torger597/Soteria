@@ -66,7 +66,7 @@
 	category = "General"
 
 /datum/autolathe/recipe/radio_bounced
-	name = "station bounced radio"
+	name = "ship bounced radio"
 	path = /obj/item/device/radio/off
 	category = "General"
 

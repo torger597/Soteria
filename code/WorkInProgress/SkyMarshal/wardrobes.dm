@@ -125,8 +125,8 @@
 		new /obj/item/clothing/under/rank/chief_engineer(src)
 
 /obj/item/wardrobe/engineer
-	name = "\improper Station Engineer Wardrobe"
-	descriptor = "clothing and basic equipment for a Station Engineer"
+	name = "\improper Ship Engineer Wardrobe"
+	descriptor = "clothing and basic equipment for a Ship Engineer"
 
 	New()
 		..()

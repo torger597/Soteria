@@ -10,7 +10,7 @@ var/can_call_ert
 /client/proc/response_team()
 	set name = "Dispatch Emergency Response Team"
 	set category = "Special Verbs"
-	set desc = "Send an emergency response team to the station"
+	set desc = "Send an emergency response team to the ship"
 
 	if(!holder)
 		usr << "\red Only administrators may use this command."
@@ -27,7 +27,7 @@ var/can_call_ert
 	if(alert("Do you want to dispatch an Emergency Response Team?",,"Yes","No") != "Yes")
 		return
 	if(get_security_level() != "red") // Allow admins to reconsider if the alert level isn't Red
-		switch(alert("The station is not in red alert. Do you still want to dispatch a response team?",,"Yes","No"))
+		switch(alert("The ship is not in red alert. Do you still want to dispatch a response team?",,"Yes","No"))
 			if("No")
 				return
 	if(send_emergency_team)

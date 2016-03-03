@@ -65,15 +65,15 @@
 					if(1 to 50)
 						objective = "Steal [pick("a hand teleporter", "the Captain's antique laser gun", "a jetpack", "the Captain's ID", "the Captain's jumpsuit")]."
 					if(51 to 60)
-						objective = "Destroy 70% or more of the station's plasma tanks."
+						objective = "Destroy 70% or more of the ship's plasma tanks."
 					if(61 to 70)
-						objective = "Cut power to 80% or more of the station's tiles."
+						objective = "Cut power to 80% or more of the ship's tiles."
 					if(71 to 80)
 						objective = "Destroy the AI."
 					if(81 to 90)
-						objective = "Kill all monkeys aboard the station."
+						objective = "Kill all monkeys aboard the ship."
 					else
-						objective = "Make certain at least 80% of the station evacuates on the shuttle."
+						objective = "Make certain at least 80% of the ship evacuates on the shuttle."
 				var/datum/objective/custom_objective = new(objective)
 				custom_objective.owner = N.mind
 				N.mind.objectives += custom_objective
@@ -83,7 +83,7 @@
 				N.mind.objectives += escape_objective
 
 
-				M << "<B>You have joined the ranks of the Syndicate and become a traitor to the station!</B>"
+				M << "<B>You have joined the ranks of the Syndicate and become a traitor to the ship!</B>"
 
 				message_admins("[N]/([N.ckey]) has accepted a traitor objective from a syndicate beacon.")
 				show_objectives(M.mind)

@@ -288,7 +288,7 @@
 	return
 
 /obj/item/weapon/SWF_uplink
-	name = "station-bounced radio"
+	name = "ship-bounced radio"
 	desc = "used to comunicate it appears."
 	icon = 'icons/obj/radio.dmi'
 	icon_state = "radio"

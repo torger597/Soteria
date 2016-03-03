@@ -8,11 +8,11 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 
 /obj/machinery/requests_console
 	name = "Requests Console"
-	desc = "A console intended to send requests to different departments on the station."
+	desc = "A console intended to send requests to different departments on the ship."
 	anchored = 1
 	icon = 'icons/obj/terminals.dmi'
 	icon_state = "req_comp0"
-	var/department = "Unknown" //The list of all departments on the station (Determined from this variable on each unit) Set this to the same thing if you want several consoles in one department
+	var/department = "Unknown" //The list of all departments on the ship (Determined from this variable on each unit) Set this to the same thing if you want several consoles in one department
 	var/list/messages = list() //List of all messages
 	var/departmentType = 0
 		// 0 = none (not listed, can only repeplied to)
@@ -185,7 +185,7 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 				dat += text("<BR><A href='?src=\ref[src];setScreen=0'>Back</A><BR>")
 
 			if(10)	//send announcement
-				dat += text("<B>Station wide announcement</B><BR><BR>")
+				dat += text("<B>Ship wide announcement</B><BR><BR>")
 				if(announceAuth)
 					dat += text("<b>Authentication accepted</b><BR><BR>")
 				else
@@ -229,7 +229,7 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 				dat += text("<BR><A href='?src=\ref[src];setScreen=0'>Back</A><BR>")
 
 			if(12) //directive index
-				dat += "<div align='center'><b>Station Directives<br>NanoTrasen<br>NSS Hypatia</b></div><br>"
+				dat += "<div align='center'><b>Ship Directives<br>NanoTrasen<br>NSS Hypatia</b></div><br>"
 
 				establish_db_connection()
 				if(!dbcon.IsConnected())
@@ -239,7 +239,7 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 				var/DBQuery/query = dbcon.NewQuery("SELECT id, name FROM ss13_directives")
 				query.Execute()
 				dat += "<div align='center'><table width='90%' cellpadding='2' cellspacing='0'>"
-				dat += "<tr><td colspan='3' bgcolor='white' align='center'><a href='?src=\ref[src];setScreen=14'>Regarding Station Directives</a><br></td></tr>"
+				dat += "<tr><td colspan='3' bgcolor='white' align='center'><a href='?src=\ref[src];setScreen=14'>Regarding Ship Directives</a><br></td></tr>"
 
 				while(query.NextRow())
 					var/id = text2num(query.item[1])
@@ -271,12 +271,12 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 				dat += "<div align='center'><a href='?src=\ref[src];setScreen=0'>Return to Main Menu</a></div>"
 
 			if(14)	//directive description
-				dat += "<div align='center'><b>Regarding Station Directives</b></div><hr>"
-				dat += "<div align='justify'>The Station Directives are a set of specific orders and directives issued and enforced aboard a specific NanoTrasen Corporation installation. This terminal provides access to orders and directives enforced aboard the <i>NSS Hypatia.</i> Note that these are only enforced upon NanoTrasen Employees, and not civilians or visitors, unless ruled otherwise by sector specific Central Command.<br><br>"
-				dat += "Overwriting power of general NanoTrasen Corporate Regulation is given to the Station Directives. Should a conflict emerge, the Station Directives active aboard the specific installation are to be adhered to, over Corporate Regulation.<br><br>"
-				dat += "Punishment for a violation of Station Directives should be escalated in the following fashion:<br><ul><li>Verbal warning, and citation. Ensure that the Employee is familiar with the Station Directives.</li><li>Charge of violating article i111 - Failure to Execute an Order - of NanoTrasen Corporate Regulation</li><li>Subsequent charge of violating article i206 - Neglect of Duty - of NanoTrasen Corporate Regulation, and review of Employee by the Employee's Head of Staff.</li><li>Subsequent failure to follow Station Directives should result in suspension of contract, if not imprisonment until transfer to Central Command station.</li></ul>"
-				dat += "Dependant on the violation and actual crimes concerned, punishment may be escalated faster, with intent to ensure in the safety of station, equipment and crew.<br>"
-				dat += "During non-standard operation, and highly abnormal circumstances, Station Directives may be overlooked, for the sake of a less costly solution to the given emergency. Note that should a follow-on review find this solution to have been more detrimental, and the breach of Directives and Regulation be unwarranted, then such an act will be punished.</div>"
+				dat += "<div align='center'><b>Regarding Ship Directives</b></div><hr>"
+				dat += "<div align='justify'>The Ship Directives are a set of specific orders and directives issued and enforced aboard a specific NanoTrasen Corporation installation. This terminal provides access to orders and directives enforced aboard the <i>NSS Hypatia.</i> Note that these are only enforced upon NanoTrasen Employees, and not civilians or visitors, unless ruled otherwise by sector specific Central Command.<br><br>"
+				dat += "Overwriting power of general NanoTrasen Corporate Regulation is given to the Ship Directives. Should a conflict emerge, the Ship Directives active aboard the specific installation are to be adhered to, over Corporate Regulation.<br><br>"
+				dat += "Punishment for a violation of Ship Directives should be escalated in the following fashion:<br><ul><li>Verbal warning, and citation. Ensure that the Employee is familiar with the Ship Directives.</li><li>Charge of violating article i111 - Failure to Execute an Order - of NanoTrasen Corporate Regulation</li><li>Subsequent charge of violating article i206 - Neglect of Duty - of NanoTrasen Corporate Regulation, and review of Employee by the Employee's Head of Staff.</li><li>Subsequent failure to follow Ship Directives should result in suspension of contract, if not imprisonment until transfer to Central Command station.</li></ul>"
+				dat += "Dependant on the violation and actual crimes concerned, punishment may be escalated faster, with intent to ensure in the safety of ship, equipment and crew.<br>"
+				dat += "During non-standard operation, and highly abnormal circumstances, Ship Directives may be overlooked, for the sake of a less costly solution to the given emergency. Note that should a follow-on review find this solution to have been more detrimental, and the breach of Directives and Regulation be unwarranted, then such an act will be punished.</div>"
 				dat += "<br><div align='center'><a href='?src=\ref[src];setScreen=12'>Return to Index</a></div>"
 				dat += "<div align='center'><a href='?src=\ref[src];setScreen=0'>Return to Main Menu</a></div>"
 
@@ -292,10 +292,10 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 				dat += text("<A href='?src=\ref[src];setScreen=1'>Request Assistance</A><BR>")
 				dat += text("<A href='?src=\ref[src];setScreen=2'>Request Supplies</A><BR>")
 				dat += text("<A href='?src=\ref[src];setScreen=3'>Relay Anonymous Information</A><BR>")
-				dat += text("<A href='?src=\ref[src];setScreen=12'>NanoTrasen Station Directives</A><BR>")
+				dat += text("<A href='?src=\ref[src];setScreen=12'>NanoTrasen Ship Directives</A><BR>")
 				dat += text("<A href='?src=\ref[src];setScreen=11'>NanoTrasen Corporate Form Database</A><BR><BR>")
 				if(announcementConsole)
-					dat += text("<A href='?src=\ref[src];setScreen=10'>Send station-wide announcement</A><BR><BR>")
+					dat += text("<A href='?src=\ref[src];setScreen=10'>Send ship-wide announcement</A><BR><BR>")
 				if (silent)
 					dat += text("Speaker <A href='?src=\ref[src];setSilent=0'>OFF</A>")
 				else

@@ -14,14 +14,14 @@
 		paycuts_suspicion
 			round_time = 60*10
 			message = {"Reports have leaked that Nanotrasen Inc. is planning to put paycuts into
-						effect on many of its Research Stations in Andromeda. Apparently these research
-						stations haven't been able to yield the expected revenue, and thus adjustments
+						effect on many of its Research Ships in Andromeda. Apparently these research
+						ships haven't been able to yield the expected revenue, and thus adjustments
 						have to be made."}
 			author = "Unauthorized"
 
 		paycuts_confirmation
 			round_time = 60*40
-			message = {"Earlier rumours about paycuts on Research Stations in the Andromeda system have
+			message = {"Earlier rumours about paycuts on Research ships in the Andromeda system have
 						been confirmed. Shockingly, however, the cuts will only affect lower tier
 						personnel. Heads of Staff will, according to our sources, not be affected."}
 			author = "Unauthorized"
@@ -29,7 +29,7 @@
 		human_experiments
 			round_time = 60*90
 			message = {"Unbelievable reports about human experimentation have reached our ears. According
-			 			to a refugee from one of the Andromeda Research Stations, their station, in order
+			 			to a refugee from one of the Andromeda Research ships, their ship, in order
 			 			to increase revenue, has refactored several of their facilities to perform experiments
 			 			on live humans, including virology research, genetic manipulation, and \"feeding them
 			 			to the slimes to see what happens\". Allegedly, these test subjects were neither
@@ -43,9 +43,9 @@
 			round_time = 60*20
 			message = {"The new field of research trying to explain several interesting spacetime oddities,
 						also known as \"Bluespace Research\", has reached new heights. Of the several
-						hundred space stations now orbiting in Andromeda, fifteen are now specially equipped
+						hundred space ships now orbiting in Andromeda, fifteen are now specially equipped
 						to experiment with and research Bluespace effects. Rumours have it some of these
-						stations even sport functional \"travel gates\" that can instantly move a whole research
+						ships even sport functional \"travel gates\" that can instantly move a whole research
 						team to an alternate reality."}
 
 	random_junk

@@ -266,7 +266,7 @@ client/proc/one_click_antag()
 
 		if(nuke_spawn)
 			var/obj/item/weapon/paper/P = new
-			P.info = "Sadly, the Syndicate could not get you a nuclear bomb.  We have, however, acquired the arming code for the station's onboard nuke.  The nuclear authorization code is: <b>[nuke_code]</b>"
+			P.info = "Sadly, the Syndicate could not get you a nuclear bomb.  We have, however, acquired the arming code for the ship's onboard nuke.  The nuclear authorization code is: <b>[nuke_code]</b>"
 			P.name = "nuclear bomb code and instructions"
 			P.loc = nuke_spawn.loc
 
@@ -320,9 +320,9 @@ client/proc/one_click_antag()
 	var/list/mob/dead/observer/candidates = list()
 	var/mob/dead/observer/theghost = null
 	var/time_passed = world.time
-	var/input = "Purify the station."
+	var/input = "Purify the ship."
 	if(prob(10))
-		input = "Save Runtime and any other cute things on the station."
+		input = "Save Runtime and any other cute things on the ship."
 
 	var/syndicate_leader_selected = 0 //when the leader is chosen. The last person spawned.
 
@@ -446,7 +446,7 @@ client/proc/one_click_antag()
 	//Generates a list of candidates from active ghosts.
 	for(var/mob/dead/observer/G in player_list)
 		spawn(0)
-			switch(alert(G,"Do you wish to be considered for a vox raiding party arriving on the station?","Please answer in 30 seconds!","Yes","No"))
+			switch(alert(G,"Do you wish to be considered for a vox raiding party arriving on the ship?","Please answer in 30 seconds!","Yes","No"))
 				if("Yes")
 					if((world.time-time_passed)>300)//If more than 30 game seconds passed.
 						return
@@ -517,7 +517,7 @@ client/proc/one_click_antag()
 	new_vox.mind_initialize()
 	new_vox.mind.assigned_role = "MODE"
 	new_vox.mind.special_role = "Vox Raider"
-	new_vox.mutations |= NOCLONE //Stops the station crew from messing around with their DNA.
+	new_vox.mutations |= NOCLONE //Stops the ship crew from messing around with their DNA.
 
 	ticker.mode.traitors += new_vox.mind
 	new_vox.equip_vox_raider()

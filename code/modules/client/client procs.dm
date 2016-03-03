@@ -66,7 +66,7 @@
 		if("prefs")		return prefs.process_link(usr,href_list)
 		if("vars")		return view_var_Topic(href,href_list,hsrc)
 
-	//Station Directives screen switch
+	//Ship Directives screen switch
 	switch(text2num(href_list["directivescreen"]))
 		if(null)
 		if(1)

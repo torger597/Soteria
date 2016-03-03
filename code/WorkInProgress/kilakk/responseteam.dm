@@ -9,7 +9,7 @@ var/global/admin_emergency_team = 0 // Used for admin-spawned response teams
 /client/proc/response_team()
 	set name = "Dispatch Emergency Response Team"
 	set category = "Special Verbs"
-	set desc = "Send an emergency response team to the station"
+	set desc = "Send an emergency response team to the ship"
 
 	if(!holder)
 		usr << "\red Only administrators may use this command."
@@ -26,7 +26,7 @@ var/global/admin_emergency_team = 0 // Used for admin-spawned response teams
 	if(alert("Do you want to dispatch an Emergency Response Team?",,"Yes","No") != "Yes")
 		return
 	if(get_security_level() != "red") // Allow admins to reconsider if the alert level isn't Red
-		switch(alert("The station has not entered code red recently. Do you still want to dispatch a response team?",,"Yes","No"))
+		switch(alert("The ship has not entered code red recently. Do you still want to dispatch a response team?",,"Yes","No"))
 			if("No")
 				return
 

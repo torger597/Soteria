@@ -138,7 +138,7 @@ var/list/event_last_fired = list()
 
 	/*switch(picked_event)
 		if("Meteor")
-			command_alert("Meteors have been detected on collision course with the station.", "Meteor Alert")
+			command_alert("Meteors have been detected on collision course with the ship.", "Meteor Alert")
 			for(var/mob/M in player_list)
 				if(!istype(M,/mob/new_player))
 					M << sound('sound/AI/meteors.ogg')
@@ -198,7 +198,7 @@ var/list/event_last_fired = list()
 
 		if(istype(M, /mob/living/silicon/robot) && M:module && M:module.name == "engineering robot module")
 			active_with_role["Engineer"]++
-		if(M.mind.assigned_role in list("Chief Engineer", "Station Engineer"))
+		if(M.mind.assigned_role in list("Chief Engineer", "Ship Engineer"))
 			active_with_role["Engineer"]++
 
 		if(istype(M, /mob/living/silicon/robot) && M:module && M:module.name == "medical robot module")

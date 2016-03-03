@@ -1018,7 +1018,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			var/obj/item/weapon/card/id/syndicate/W = new(src) //Untrackable by AI
 			W.name = "[M.real_name]'s ID Card"
 			W.icon_state = "id"
-			W.access = get_all_accesses()//They get full station access because obviously the syndicate has HAAAX, and can make special IDs for their most elite members.
+			W.access = get_all_accesses()//They get full ship access because obviously the syndicate has HAAAX, and can make special IDs for their most elite members.
 			W.access += list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage, access_syndicate)//Let's add their forged CentCom access and syndicate access.
 			W.assignment = "Shadowling"
 			W.registered_name = M.real_name
@@ -1122,7 +1122,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			var/obj/item/weapon/card/id/syndicate/W = new(src) //Untrackable by AI
 			W.name = "[M.real_name]'s ID Card"
 			W.icon_state = "id"
-			W.access = get_all_accesses()//They get full station access because obviously the syndicate has HAAAX, and can make special IDs for their most elite members.
+			W.access = get_all_accesses()//They get full ship access because obviously the syndicate has HAAAX, and can make special IDs for their most elite members.
 			W.access += list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage, access_syndicate)//Let's add their forged CentCom access and syndicate access.
 			W.assignment = "Field Operator"
 			W.registered_name = M.real_name
@@ -1162,8 +1162,8 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			var/obj/item/weapon/card/id/silver/W = new(src)
 			W.name = "[M.real_name]'s ID Card"
 			W.icon_state = "id"
-			W.access = get_all_accesses()//Full station access because, DOCTOR HAAAAAAAALP MEEEEEE
-			W.access += list(access_cent_general, access_cent_specops, access_cent_storage)//CC access to the ERT area(s) so they can gear up and get to the station.
+			W.access = get_all_accesses()//Full ship access because, DOCTOR HAAAAAAAALP MEEEEEE
+			W.access += list(access_cent_general, access_cent_specops, access_cent_storage)//CC access to the ERT area(s) so they can gear up and get to the ship.
 			W.assignment = "IAC Worker"
 			W.registered_name = M.real_name
 			M.equip_to_slot_or_del(W, slot_wear_id)
@@ -1201,7 +1201,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 /client/proc/startSinglo()
 	set category = "Debug"
 	set name = "Start Singularity"
-	set desc = "Sets up the singularity and all machines to get power flowing through the station"
+	set desc = "Sets up the singularity and all machines to get power flowing through the ship"
 
 	if(!check_rights(R_DEBUG))	return
 

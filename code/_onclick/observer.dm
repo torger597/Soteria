@@ -31,7 +31,7 @@
 	if(client.buildmode)
 		build_click(src, client.buildmode, params, A)
 		return
-	if(!AllowedToMoveAgain()) 
+	if(!AllowedToMoveAgain())
 		return
 	AllowedToClickAgainAfter(CLICK_CD_GHOST)
 	// You are responsible for checking config.ghost_interaction when you override this function
@@ -57,7 +57,7 @@
 /obj/effect/portal/attack_ghost(mob/user as mob)
 	if(target)
 		user.loc = get_turf(target)
-
+/*
 /obj/machinery/gateway/centerstation/attack_ghost(mob/user as mob)
 	if(awaygate)
 		user.loc = awaygate.loc
@@ -69,7 +69,7 @@
 		user.loc = stationgate.loc
 	else
 		user << "[src] has no destination."
-
+*/
 // -------------------------------------------
 // This was supposed to be used by adminghosts
 // I think it is a *terrible* idea

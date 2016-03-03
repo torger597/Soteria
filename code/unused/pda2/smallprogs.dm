@@ -37,7 +37,7 @@
 
 		var/dat = src.return_text_header()
 
-		dat += "<h4>Station Status Display Interlink</h4>"
+		dat += "<h4>Ship Status Display Interlink</h4>"
 
 		dat += "\[ <A HREF='?src=\ref[src];statdisp=blank'>Clear</A> \]<BR>"
 		dat += "\[ <A HREF='?src=\ref[src];statdisp=shuttle'>Shuttle ETA</A> \]<BR>"
@@ -188,7 +188,7 @@ Code:
 		dat += "<h4>Supply Record Interlink</h4>"
 
 		dat += "<BR><B>Supply shuttle</B><BR>"
-		dat += "Location: [supply_shuttle_moving ? "Moving to station ([supply_shuttle_timeleft] Mins.)":supply_shuttle_at_station ? "Station":"Dock"]<BR>"
+		dat += "Location: [supply_shuttle_moving ? "Moving to ship ([supply_shuttle_timeleft] Mins.)":supply_shuttle_at_station ? "Ship":"Dock"]<BR>"
 		dat += "Current approved orders: <BR><ol>"
 		for(var/S in supply_shuttle_shoppinglist)
 			var/datum/supply_order/SO = S

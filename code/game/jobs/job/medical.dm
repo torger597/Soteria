@@ -2,7 +2,7 @@
 	title = "Chief Medical Officer"
 	flag = CMO
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the captain"
@@ -40,7 +40,7 @@
 	title = "Medical Doctor"
 	flag = DOCTOR
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 4
 	spawn_positions = 3
 	supervisors = "the chief medical officer"
@@ -101,7 +101,7 @@
 	title = "Emergency Medical Tech"
 	flag = EMT
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the chief medical officer"
@@ -134,7 +134,7 @@
 	title = "Chemist"
 	flag = CHEMIST
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the chief medical officer"
@@ -165,7 +165,7 @@
 	title = "Geneticist"
 	flag = GENETICIST
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the chief medical officer and research director"
@@ -195,7 +195,7 @@
 	title = "Virologist"
 	flag = VIROLOGIST
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the chief medical officer"
@@ -228,7 +228,7 @@
 	title = "Psychiatrist"
 	flag = PSYCHIATRIST
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the chief medical officer"

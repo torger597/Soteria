@@ -42,7 +42,7 @@
 
 /datum/game_mode/vampire/announce()
 	world << "<B>The current game mode is - Vampires!</B>"
-	world << "<B>There are Vampires from Space Transylvania on the station, keep your blood close and neck safe!</B>"
+	world << "<B>There are Vampires from Space Transylvania on the ship, keep your blood close and neck safe!</B>"
 
 /datum/game_mode/vampire/pre_setup()
 

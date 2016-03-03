@@ -59,7 +59,7 @@ proc/assign_sec_to_department(var/mob/living/carbon/human/H)
 	title = "Security Officer"
 	flag = OFFICER
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = "Ship"
 	total_positions = 5
 	spawn_positions = 5
 	supervisors = "the head of security, and the head of your assigned department (if applicable)"

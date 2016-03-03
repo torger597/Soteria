@@ -10,7 +10,7 @@
 	icon = 'icons/obj/atmos.dmi'
 	icon_state = "sheater0"
 	name = "space cooler"
-	desc = "Made by Space Amish using traditional space techniques, this cooler is guaranteed not to set the station on fire."
+	desc = "Made by Space Amish using traditional space techniques, this cooler is guaranteed not to set the ship on fire."
 //	var/obj/item/weapon/cell/cell
 	var/obj/item/weapon/tank/nitrogen/N2tank
 	var/on = 0

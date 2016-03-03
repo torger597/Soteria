@@ -123,9 +123,9 @@
 	return 0
 
 
-// this function displays the station time in the status panel
+// this function displays the ship time in the status panel
 /mob/living/silicon/proc/show_station_time()
-	stat(null, "Station Time: [worldtime2text()]")
+	stat(null, "Ship Time: [worldtime2text()]")
 
 
 // this function displays the shuttles ETA in the status panel if the shuttle has been called
@@ -146,7 +146,7 @@
 		show_system_integrity()
 		show_malf_ai()
 
-// this function displays the stations manifest in a separate window
+// this function displays the ships manifest in a separate window
 /mob/living/silicon/proc/show_station_manifest()
 	var/dat
 	dat += "<h4>Crew Manifest</h4>"
@@ -209,7 +209,7 @@
 
 /mob/living/silicon/binarycheck()
 	return 1
-	
+
 /mob/living/silicon/proc/toggle_sensor_mode()
 	var/sensor_type = input("Please select sensor type.", "Sensor Integration", null) in list("Security", "Medical","Disable")
 	switch(sensor_type)

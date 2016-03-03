@@ -12,7 +12,7 @@
 	var/frequency = 1
 	var/emitting = 0
 	var/rate = 10
-	var/mega_energy = 0.001
+	var/mega_energy = 0.01
 	var/on = 1
 	var/remoteenabled = 1
 	//
@@ -34,12 +34,12 @@
 			usr.machine = null
 			return
 		if( href_list["modifypower"] )
-			var/new_val = text2num(input("Enter new emission power level (0.001 - 0.01)", "Modifying power level (MeV)", mega_energy))
+			var/new_val = text2num(input("Enter new emission power level (0.01 - 0.05)", "Modifying power level (MeV)", mega_energy))
 			if(!new_val)
 				usr << "\red That's not a valid number."
 				return
-			new_val = min(new_val,0.01)
-			new_val = max(new_val,0.001)
+			new_val = min(new_val,0.05)
+			new_val = max(new_val,0.01)
 			mega_energy = new_val
 			for(var/obj/machinery/computer/rust_gyrotron_controller/comp in range(25))
 				comp.updateDialog()

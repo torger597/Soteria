@@ -161,13 +161,13 @@ var/datum/jobs/jobs = new/datum/jobs()
 proc/setup_jobs()
 	var/datum/job/JOB
 
-	JOB = new/datum/job("Station Engineer")
+	JOB = new/datum/job("Ship Engineer")
 	JOB.alternative_titles = list("Structural Engineer","Engineer","Student of Engineering")
 	JOB.job_number_at_round_start = 5
 	JOB.job_number_total = 5
 	JOB.bosses = list("Chief Engineer")
 	JOB.admin_only = 0
-	JOB.description = "Engineers are tasked with the maintenance of the station. Be it maintaining the power grid or rebuilding damaged sections."
+	JOB.description = "Engineers are tasked with the maintenance of the ship. Be it maintaining the power grid or rebuilding damaged sections."
 	JOB.guides = ""
 	JOB.equipment_ears = list(/obj/item/device/radio/headset/headset_eng)
 	JOB.equipment_glasses = list()

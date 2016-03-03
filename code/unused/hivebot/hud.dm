@@ -38,7 +38,7 @@
 	src.druggy.layer = 17
 	src.druggy.mouse_opacity = 0
 
-	// station explosion cinematic
+	// ship explosion cinematic
 	src.station_explosion = new src.h_type( src )
 	src.station_explosion.icon = 'icons/effects/station_explosion.dmi'
 	src.station_explosion.icon_state = "start"

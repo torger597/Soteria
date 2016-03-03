@@ -408,8 +408,8 @@ datum/design/onehuman_module
 	build_path = "/obj/item/weapon/aiModule/oneHuman"
 
 datum/design/protectstation_module
-	name = "Module Design (ProtectStation)"
-	desc = "Allows for the construction of a ProtectStation AI Module."
+	name = "Module Design (Protectship)"
+	desc = "Allows for the construction of a Protectship AI Module."
 	id = "protectstation_module"
 	req_tech = list("programming" = 3, "materials" = 6)
 	build_type = IMPRINTER

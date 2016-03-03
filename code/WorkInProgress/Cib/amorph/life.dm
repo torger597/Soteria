@@ -1,5 +1,5 @@
 /mob/living/carbon/amorph
-	var/obj/item/weapon/card/id/wear_id = null // Fix for station bounced radios -- Skie
+	var/obj/item/weapon/card/id/wear_id = null // Fix for ship bounced radios -- Skie
 
 	var/oxygen_alert = 0
 	var/toxins_alert = 0

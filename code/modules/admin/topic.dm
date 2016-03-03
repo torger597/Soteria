@@ -226,7 +226,7 @@
 				if (emergency_shuttle.can_call())
 					emergency_shuttle.call_evac()
 					log_admin("[key_name(usr)] called the Emergency Shuttle")
-					message_admins("\blue [key_name_admin(usr)] called the Emergency Shuttle to the station", 1)
+					message_admins("\blue [key_name_admin(usr)] called the Emergency Shuttle to the ship", 1)
 
 			if("2")
 				if (!( ticker ) || !emergency_shuttle.location())
@@ -234,7 +234,7 @@
 				if (emergency_shuttle.can_call())
 					emergency_shuttle.call_evac()
 					log_admin("[key_name(usr)] called the Emergency Shuttle")
-					message_admins("\blue [key_name_admin(usr)] called the Emergency Shuttle to the station", 1)
+					message_admins("\blue [key_name_admin(usr)] called the Emergency Shuttle to the ship", 1)
 
 				else if (emergency_shuttle.can_recall())
 					emergency_shuttle.recall()
@@ -1897,7 +1897,7 @@
 					AM.z = 1
 					AM.Move()
 				*/
-				message_admins("\blue [key_name_admin(usr)] sent the prison shuttle to the station.", 1)
+				message_admins("\blue [key_name_admin(usr)] sent the prison shuttle to the ship.", 1)
 			if("deactivateprison")
 				/*
 				feedback_inc("admin_secrets_fun_used",1)
@@ -2146,11 +2146,11 @@
 						M.show_message(text("\blue The chilling wind suddenly stops..."), 1)
 /*				if("shockwave")
 				ok = 1
-				world << "\red <B><big>ALERT: STATION STRESS CRITICAL</big></B>"
+				world << "\red <B><big>ALERT: SHIP STRESS CRITICAL</big></B>"
 				sleep(60)
-				world << "\red <B><big>ALERT: STATION STRESS CRITICAL. TOLERABLE LEVELS EXCEEDED!</big></B>"
+				world << "\red <B><big>ALERT: SHIP STRESS CRITICAL. TOLERABLE LEVELS EXCEEDED!</big></B>"
 				sleep(80)
-				world << "\red <B><big>ALERT: STATION STRUCTURAL STRESS CRITICAL. SAFETY MECHANISMS FAILED!</big></B>"
+				world << "\red <B><big>ALERT: SHIP STRUCTURAL STRESS CRITICAL. SAFETY MECHANISMS FAILED!</big></B>"
 				sleep(40)
 				for(var/mob/M in world)
 					shake_camera(M, 400, 1)
@@ -2194,7 +2194,7 @@
 			if("gravanomalies")
 				feedback_inc("admin_secrets_fun_used",1)
 				feedback_add_details("admin_secrets_fun_used","GA")
-				command_alert("Gravitational anomalies detected on the station. There is no additional data.", "Anomaly Alert")
+				command_alert("Gravitational anomalies detected on the ship. There is no additional data.", "Anomaly Alert")
 				world << sound('sound/AI/granomalies.ogg')
 				var/turf/T = pick(blobstart)
 				var/obj/effect/bhole/bh = new /obj/effect/bhole( T.loc, 30 )
@@ -2257,12 +2257,12 @@
 			if("radiation")
 				feedback_inc("admin_secrets_fun_used",1)
 				feedback_add_details("admin_secrets_fun_used","R")
-				message_admins("[key_name_admin(usr)] has has irradiated the station", 1)
+				message_admins("[key_name_admin(usr)] has has irradiated the ship", 1)
 				new /datum/event/radiation_storm
 			if("immovable")
 				feedback_inc("admin_secrets_fun_used",1)
 				feedback_add_details("admin_secrets_fun_used","IR")
-				message_admins("[key_name_admin(usr)] has sent an immovable rod to the station", 1)
+				message_admins("[key_name_admin(usr)] has sent an immovable rod to the ship", 1)
 				immovablerod()
 			if("prison_break")
 				feedback_inc("admin_secrets_fun_used",1)
@@ -2395,7 +2395,7 @@
 				for(var/obj/machinery/door/airlock/W in world)
 					if(W.z == 1 && !istype(get_area(W), /area/bridge) && !istype(get_area(W), /area/crew_quarters) && !istype(get_area(W), /area/security/prison))
 						W.req_access = list()
-				message_admins("[key_name_admin(usr)] activated Egalitarian Station mode")
+				message_admins("[key_name_admin(usr)] activated Egalitarian Ship mode")
 				command_alert("Centcomm airlock control override activated. Please take this time to get acquainted with your coworkers.")
 				world << sound('sound/AI/commandreport.ogg')
 			if("dorf")
@@ -2412,7 +2412,7 @@
 				message_admins("[key_name_admin(usr)] triggered an ion storm")
 				var/show_log = alert(usr, "Show ion message?", "Message", "Yes", "No")
 				if(show_log == "Yes")
-					command_alert("Ion storm detected near the station. Please check all AI-controlled equipment for errors.", "Anomaly Alert")
+					command_alert("Ion storm detected near the ship. Please check all AI-controlled equipment for errors.", "Anomaly Alert")
 					world << sound('sound/AI/ionstorm.ogg')
 			if("spacevines")
 				feedback_inc("admin_secrets_fun_used",1)
@@ -2667,7 +2667,7 @@
 					news_network.wanted_issue.body = src.admincaster_feed_message.body
 					news_network.wanted_issue.backup_author = src.admincaster_feed_message.backup_author
 					src.admincaster_screen = 19
-				log_admin("[key_name_admin(usr)] issued a Station-wide Wanted Notification for [src.admincaster_feed_message.author]!")
+				log_admin("[key_name_admin(usr)] issued a Ship-wide Wanted Notification for [src.admincaster_feed_message.author]!")
 		src.access_news_network()
 
 	else if(href_list["ac_cancel_wanted"])

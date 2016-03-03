@@ -54,8 +54,8 @@
 	src.botcard = new /obj/item/weapon/card/id(src)
 	var/datum/job/janitor/J = new/datum/job/janitor
 	src.botcard.access = J.get_access()
-	
-	src.locked = 0 // Start unlocked so roboticist can set them to patrol.	
+
+	src.locked = 0 // Start unlocked so roboticist can set them to patrol.
 
 	if(radio_controller)
 		radio_controller.add_object(src, beacon_freq, filter = RADIO_NAVBEACONS)
@@ -87,14 +87,14 @@
 /obj/machinery/bot/cleanbot/interact(mob/user as mob)
 	var/dat
 	dat += text({"
-<TT><B>Automatic Station Cleaner v1.0</B></TT><BR><BR>
+<TT><B>Automatic Ship Cleaner v1.0</B></TT><BR><BR>
 Status: []<BR>
 Behaviour controls are [src.locked ? "locked" : "unlocked"]<BR>
 Maintenance panel is [src.open ? "opened" : "closed"]"},
 text("<A href='?src=\ref[src];operation=start'>[src.on ? "On" : "Off"]</A>"))
 	if(!src.locked || issilicon(user))
 		dat += text({"<BR>Cleans Blood: []<BR>"}, text("<A href='?src=\ref[src];operation=blood'>[src.blood ? "Yes" : "No"]</A>"))
-		dat += text({"<BR>Patrol station: []<BR>"}, text("<A href='?src=\ref[src];operation=patrol'>[src.should_patrol ? "Yes" : "No"]</A>"))
+		dat += text({"<BR>Patrol ship: []<BR>"}, text("<A href='?src=\ref[src];operation=patrol'>[src.should_patrol ? "Yes" : "No"]</A>"))
 	//	dat += text({"<BR>Beacon frequency: []<BR>"}, text("<A href='?src=\ref[src];operation=freq'>[src.beacon_freq]</A>"))
 	if(src.open && !src.locked)
 		dat += text({"

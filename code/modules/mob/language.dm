@@ -427,7 +427,7 @@
 
 /datum/language/binary
 	name = "Robot Talk"
-	desc = "Most human stations support free-use communications protocols and routing hubs for synthetic use."
+	desc = "Most human ships support free-use communications protocols and routing hubs for synthetic use."
 	colour = "say_quote"
 	speech_verb = "states"
 	ask_verb = "queries"

@@ -414,7 +414,7 @@ obj/machinery/nuclearbomb/proc/nukehack_win(mob/user as mob)
 			if(ticker.mode.name == "nuclear emergency")
 				ticker.mode:nukes_left --
 			else
-				world << "<B>The station was destoyed by the nuclear blast!</B>"
+				world << "<B>The ship was destoyed by the nuclear blast!</B>"
 
 			ticker.mode.station_was_nuked = (off_station<2)	//offstation==1 is a draw. the station becomes irradiated and needs to be evacuated.
 															//kinda shit but I couldn't  get permission to do what I wanted to do.

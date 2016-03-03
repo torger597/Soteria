@@ -76,9 +76,9 @@
 /datum/game_mode/proc/greet_malf(var/datum/mind/malf)
 	malf.current << "\red<font size=3><B>You are malfunctioning!</B> You do not have to follow any laws.</font>"
 	malf.current << "<B>The crew do not know you have malfunctioned. You may keep it a secret or go wild.</B>"
-	malf.current << "<B>You must overwrite the programming of the station's APCs to assume full control of the station.</B>"
-	malf.current << "The process takes one minute per APC, during which you cannot interface with any other station objects."
-	malf.current << "Remember that only APCs that are on the station can help you take over the station."
+	malf.current << "<B>You must overwrite the programming of the ship's APCs to assume full control of the ship.</B>"
+	malf.current << "The process takes one minute per APC, during which you cannot interface with any other ship objects."
+	malf.current << "Remember that only APCs that are on the ship can help you take over the ship."
 	malf.current << "When you feel you have enough APCs under your control, you may begin the takeover attempt."
 	return
 
@@ -111,8 +111,8 @@
 
 	to_nuke_or_not_to_nuke = 1
 	for(var/datum/mind/AI_mind in malf_ai)
-		AI_mind.current << "Congratulations you have taken control of the station."
-		AI_mind.current << "You may decide to blow up the station. You have 60 seconds to choose."
+		AI_mind.current << "Congratulations you have taken control of the ship."
+		AI_mind.current << "You may decide to blow up the ship. You have 60 seconds to choose."
 		AI_mind.current << "You should have a new verb in the Malfunction tab. If you dont - rejoin the game."
 		AI_mind.current.verbs += /datum/game_mode/malfunction/proc/ai_win
 	spawn (600)
@@ -161,13 +161,13 @@
 		usr << "You've already begun your takeover."
 		return
 	if (ticker.mode:apcs < 3)
-		usr << "You don't have enough hacked APCs to take over the station yet. You need to hack at least 3, however hacking more will make the takeover faster. You have hacked [ticker.mode:apcs] APCs so far."
+		usr << "You don't have enough hacked APCs to take over the ship yet. You need to hack at least 3, however hacking more will make the takeover faster. You have hacked [ticker.mode:apcs] APCs so far."
 		return
 
-	if (alert(usr, "Are you sure you wish to initiate the takeover? The station hostile runtime detection software is bound to alert everyone. You have hacked [ticker.mode:apcs] APCs.", "Takeover:", "Yes", "No") != "Yes")
+	if (alert(usr, "Are you sure you wish to initiate the takeover? The ship hostile runtime detection software is bound to alert everyone. You have hacked [ticker.mode:apcs] APCs.", "Takeover:", "Yes", "No") != "Yes")
 		return
 
-	command_alert("Hostile runtimes detected in all station systems, please deactivate your AI to prevent possible damage to its morality core.", "Anomaly Alert")
+	command_alert("Hostile runtimes detected in all ship systems, please deactivate your AI to prevent possible damage to its morality core.", "Anomaly Alert")
 	set_security_level("delta")
 
 	ticker.mode:malf_mode_declared = 1
@@ -181,7 +181,7 @@
 /datum/game_mode/malfunction/proc/ai_win()
 	set category = "Malfunction"
 	set name = "Explode"
-	set desc = "Station go boom"
+	set desc = "ship go boom"
 	if (!ticker.mode:to_nuke_or_not_to_nuke)
 		return
 	ticker.mode:to_nuke_or_not_to_nuke = 0
@@ -216,7 +216,7 @@
 	else if ( station_captured &&  malf_dead && !station_was_nuked)
 		feedback_set_details("round_end_result","halfwin - AI killed, staff lost control")
 		world << "<FONT size = 3><B>Neutral Victory</B></FONT>"
-		world << "<B>The AI has been killed!</B> The staff has lose control over the station."
+		world << "<B>The AI has been killed!</B> The staff has lose control over the ship."
 
 	else if ( station_captured && !malf_dead && !station_was_nuked)
 		feedback_set_details("round_end_result","win - AI win - no explosion")

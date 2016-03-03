@@ -29,9 +29,9 @@
 				A member of your Command Staff is this shift's designated Emergency Secondary Authenticator.<br>
 				This Emergency Secondary Authenticator is uniquely aware of their role and possesses the Emergency Secondary Authentication Key.<br>
 				As Captain, you possess the Captain's Authentication Key.<br>
-				The Emergency Authentication Device is located in the vault of your station, and requires simultaneous activation of the Authentication Keys.<br>
-				An <b>Authentication Key Pinpointer</b> can be delivered via Cargo Bay to assist recovery of the Authentication Keys should they be lost aboard the station.<br>
-				A key's destruction or removal from the station's perimeter will automatically and irreversibly activate the Emergency Authentication Device.
+				The Emergency Authentication Device is located in the vault of your ship, and requires simultaneous activation of the Authentication Keys.<br>
+				An <b>Authentication Key Pinpointer</b> can be delivered via Cargo Bay to assist recovery of the Authentication Keys should they be lost aboard the ship.<br>
+				A key's destruction or removal from the ship's perimeter will automatically and irreversibly activate the Emergency Authentication Device.
 			</p>
 			<br>
 
@@ -101,43 +101,43 @@ Both keys are required to activate the <b>Emergency Authentication Device (EAD)<
 
 	proc/loyalist_major_victory()
 		return {"
-NanoTrasen has praised the efforts of Captain [mode.head_loyalist] and loyal members of [their(mode.head_loyalist)] crew, who recently managed to put down a mutiny--amid a local interstellar crisis--aboard the <b>[station_name()]</b>, a research station in [system_name()].
-The mutiny was spurred by a top secret directive sent to the station, presumably in response to the crisis within the system.
+NanoTrasen has praised the efforts of Captain [mode.head_loyalist] and loyal members of [their(mode.head_loyalist)] crew, who recently managed to put down a mutiny--amid a local interstellar crisis--aboard the <b>[station_name()]</b>, a research ship in [system_name()].
+The mutiny was spurred by a top secret directive sent to the ship, presumably in response to the crisis within the system.
 Despite the mutiny, the crew was successful in implementing the directive and activating their on-board emergency authentication device.
-[mode.mutineers.len] members of the station's personnel were charged with terrorist action against the Company and, if found guilty by a Sol magistrate, will be sentenced to life incarceration.
+[mode.mutineers.len] members of the ship's personnel were charged with terrorist action against the Company and, if found guilty by a Sol magistrate, will be sentenced to life incarceration.
 NanoTrasen will be awarding [mode.loyalists.len] members of the crew with the [loyalist_tag("Star of Loyalty")], following their successful efforts, at a ceremony this coming Thursday.
 [mode.body_count.len] are believed to have died during the coup.
-<p>NanoTrasen's image will forever be haunted by the fact that a mutiny took place on one of its own stations.</p>
+<p>NanoTrasen's image will forever be haunted by the fact that a mutiny took place on one of its own ships.</p>
 		"}
 
 	proc/loyalist_minor_victory()
 		return {"
-NanoTrasen has praised the efforts of Captain [mode.head_loyalist] and loyal members of [their(mode.head_loyalist)] crew, who recently managed to put down a mutiny--amid a local interstellar crisis--aboard the <b>[station_name()]</b>, a research station in [system_name()].
-The mutiny was spurred by a top secret directive sent to the station, presumably in response to the crisis within the system.
+NanoTrasen has praised the efforts of Captain [mode.head_loyalist] and loyal members of [their(mode.head_loyalist)] crew, who recently managed to put down a mutiny--amid a local interstellar crisis--aboard the <b>[station_name()]</b>, a research ship in [system_name()].
+The mutiny was spurred by a top secret directive sent to the ship, presumably in response to the crisis within the system.
 Despite the mutiny, the crew was successful in implementing the directive. Unfortunately, they failed to notify Central Command of their successes due to a breach in the chain of command.
-[mode.mutineers.len] members of the station's personnel were charged with terrorist action against the Company and, if found guilty by a Sol magistrate, will be sentenced to life incarceration.
+[mode.mutineers.len] members of the ship's personnel were charged with terrorist action against the Company and, if found guilty by a Sol magistrate, will be sentenced to life incarceration.
 NanoTrasen will be awarding [mode.loyalists.len] members of the crew with the [loyalist_tag("Star of Loyalty")], following their mostly successful efforts, at a ceremony this coming Thursday.
 [mode.body_count.len] are believed to have died during the coup.
-<p>NanoTrasen's image will forever be haunted by the fact that a mutiny took place on one of its own stations.</p>
+<p>NanoTrasen's image will forever be haunted by the fact that a mutiny took place on one of its own ships.</p>
 		"}
 
 	proc/no_victory()
 		return {"
-NanoTrasen has been thrust into turmoil following an apparent mutiny by key personnel aboard the <b>[station_name()]</b>, a research station in [system_name()].
-The mutiny was spurred by a top secret directive sent to the station, presumably in response to the crisis within the system.
-No further information has yet emerged from the station or its crew, who are presumed to be in holding with NanoTrasen investigators.
+NanoTrasen has been thrust into turmoil following an apparent mutiny by key personnel aboard the <b>[station_name()]</b>, a research ship in [system_name()].
+The mutiny was spurred by a top secret directive sent to the ship, presumably in response to the crisis within the system.
+No further information has yet emerged from the ship or its crew, who are presumed to be in holding with NanoTrasen investigators.
 NanoTrasen officials refuse to comment.
-Sources indicate that [mode.mutineers.len] members of the station's personnel are currently under investigation for terrorist activity, and [mode.loyalists.len] crew are currently providing evidence to investigators, believed to be the 'loyal' station personnel.
+Sources indicate that [mode.mutineers.len] members of the ship's personnel are currently under investigation for terrorist activity, and [mode.loyalists.len] crew are currently providing evidence to investigators, believed to be the 'loyal' ship personnel.
 [mode.body_count.len] are believed to have died during the coup.
-<p>NanoTrasen's image will forever be haunted by the fact that a mutiny took place on one of its own stations.</p>
+<p>NanoTrasen's image will forever be haunted by the fact that a mutiny took place on one of its own ships.</p>
 		"}
 
 	proc/mutineer_minor_victory()
 		return {"
-Reports have emerged that an impromptu mutiny has taken place, amid a local interstellar crisis, aboard the <b>[station_name()]</b>, a research station in [system_name()].
-The mutiny was spurred by a top secret directive sent to the station, presumably in response to the crisis within the system.
+Reports have emerged that an impromptu mutiny has taken place, amid a local interstellar crisis, aboard the <b>[station_name()]</b>, a research ship in [system_name()].
+The mutiny was spurred by a top secret directive sent to the ship, presumably in response to the crisis within the system.
 Information at present indicates that the top-secret directive--which has since been retracted--was invalid due to a broken authentication code. Members of the crew, including an unidentified Head of Staff, prevented the directive from being accomplished.
-[mode.mutineers.len] members of the station's personnel were released from interrogations today, following a mutiny investigation.
+[mode.mutineers.len] members of the ship's personnel were released from interrogations today, following a mutiny investigation.
 NanoTrasen has reprimanded [mode.loyalists.len] members of the crew for failing to follow command validation procedures.
 [mode.body_count.len] are believed to have died during the coup.
 <p>Even though the directive was not successfully implemented, NanoTrasen's image will forever be haunted by the fact that its authentication protocol was breached with such magnitude and that a mutiny was the result.</p>
@@ -145,11 +145,11 @@ NanoTrasen has reprimanded [mode.loyalists.len] members of the crew for failing 
 
 	proc/mutineer_major_victory()
 		return {"
-NanoTrasen has praised the efforts of [mode.head_mutineer.assigned_role] [mode.head_mutineer] and several other members of the crew, who recently seized control of a company station in [system_name()]--<b>[station_name()]</b>--amid a local interstellar crisis.
-What appears to have been a "legitimate" mutiny was spurred by a top secret directive sent to the station, presumably in response to the crisis within the system.
+NanoTrasen has praised the efforts of [mode.head_mutineer.assigned_role] [mode.head_mutineer] and several other members of the crew, who recently seized control of a company ship in [system_name()]--<b>[station_name()]</b>--amid a local interstellar crisis.
+What appears to have been a "legitimate" mutiny was spurred by a top secret directive sent to the ship, presumably in response to the crisis within the system.
 It has been revealed that the directive was invalid and fraudulent. Company officials have not released a statement about the source of the directive.
 Thanks to the efforts of the resistant members of the crew, the directive was not carried out.
-[mode.mutineers.len] members of the station's personnel were congratulated and awarded with the [mutineer_tag("Star of Bravery")], for their efforts in preventing the illegal directive's completion.
+[mode.mutineers.len] members of the ship's personnel were congratulated and awarded with the [mutineer_tag("Star of Bravery")], for their efforts in preventing the illegal directive's completion.
 NanoTrasen has [mode.loyalists.len] members of the crew in holding, while it investigates the circumstances that led to the acceptance and initiation of an invalid directive.
 [mode.body_count.len] are believed to have died during the coup.
 <p>Even though the directive was not successfully implemented, NanoTrasen's image will forever be haunted by the fact that its authentication protocol was breached with such magnitude and that a mutiny was the result.</p>

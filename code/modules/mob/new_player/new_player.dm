@@ -38,9 +38,9 @@
 
 		output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
 
-		//Station Directives
+		//Ship Directives
 		if(config.invasive_directives)
-			output += "<p><a href='byond://?src=\ref[src];showdirectives=1'>Station Directives</a></p>"
+			output += "<p><a href='byond://?src=\ref[src];showdirectives=1'>Ship Directives</a></p>"
 
 		if(!IsGuestKey(src.key))
 			establish_db_connection()
@@ -73,7 +73,7 @@
 		statpanel("Status")
 		if (client.statpanel == "Status" && ticker)
 			if (ticker.current_state != GAME_STATE_PREGAME)
-				stat(null, "Station Time: [worldtime2text()]")
+				stat(null, "Ship Time: [worldtime2text()]")
 		statpanel("Lobby")
 		if(client.statpanel=="Lobby" && ticker)
 			if(ticker.hide_mode)
@@ -154,7 +154,7 @@
 
 				var/datum/species/S = all_species[client.prefs.species]
 				if(!(S.flags & IS_WHITELISTED))
-					src << alert("Your current species,[client.prefs.species], is not available for play on the station.")
+					src << alert("Your current species,[client.prefs.species], is not available for play on the ship.")
 					return 0
 
 			LateChoices()
@@ -175,7 +175,7 @@
 
 				var/datum/species/S = all_species[client.prefs.species]
 				if(!(S.flags & IS_WHITELISTED))
-					src << alert("Your current species,[client.prefs.species], is not available for play on the station.")
+					src << alert("Your current species,[client.prefs.species], is not available for play on the ship.")
 					return 0
 
 			AttemptLateSpawn(href_list["SelectedJob"],client.prefs.spawnpoint)
@@ -327,7 +327,7 @@
 			join_message = S.msg
 		else
 			character.loc = pick(latejoin)
-			join_message = "has arrived on the station"
+			join_message = "has been awoken from Cryogenic Stasis"
 
 		character.lastarea = get_area(loc)
 		// Moving wheelchair if they have one
@@ -356,7 +356,7 @@
 			var/obj/item/device/radio/intercom/a = new /obj/item/device/radio/intercom(null)// BS12 EDIT Arrivals Announcement Computer, rather than the AI.
 			if(character.mind.role_alt_title)
 				rank = character.mind.role_alt_title
-			a.autosay("[character.real_name],[rank ? " [rank]," : " visitor," ] [join_message ? join_message : "has arrived on the station"].", "Arrivals Announcement Computer")
+			a.autosay("[character.real_name],[rank ? " [rank]," : " visitor," ] [join_message ? join_message : "has been awoken from Cryogenic Stasis"].", "Cryogenic Stasis VI")
 			del(a)
 
 	proc/LateChoices()
@@ -370,12 +370,12 @@
 
 		if(emergency_shuttle) //In case Nanotrasen decides reposess CentComm's shuttles.
 			if(emergency_shuttle.going_to_centcom()) //Shuttle is going to centcomm, not recalled
-				dat += "<font color='red'><b>The station has been evacuated.</b></font><br>"
+				dat += "<font color='red'><b>The ship has been evacuated.</b></font><br>"
 			if(emergency_shuttle.online())
 				if (emergency_shuttle.evac)	// Emergency shuttle is past the point of no recall
-					dat += "<font color='red'>The station is currently undergoing evacuation procedures.</font><br>"
+					dat += "<font color='red'>The ship is currently undergoing evacuation procedures.</font><br>"
 				else						// Crew transfer initiated
-					dat += "<font color='red'>The station is currently undergoing crew transfer procedures.</font><br>"
+					dat += "<font color='red'>The shift is currently ending..</font><br>"
 
 		dat += "Choose from the following open positions:<br>"
 		for(var/datum/job/job in job_master.occupations)
