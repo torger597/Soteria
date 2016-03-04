@@ -5,6 +5,9 @@
 // END_INTERNALS
 // BEGIN_FILE_DIR
 #define FILE_DIR .
+// END_FILE_DIR
+// BEGIN_FILE_DIR
+#define FILE_DIR .
 #define FILE_DIR "code"
 #define FILE_DIR "code/TriDimension"
 #define FILE_DIR "code/WorkInProgress"
@@ -76,9 +79,6 @@
 #define FILE_DIR "tools/AddToChangelog"
 #define FILE_DIR "tools/AddToChangelog/AddToChangelog"
 // END_FILE_DIR
-// BEGIN_PREFERENCES
-#define DEBUG
-// END_PREFERENCES
 // BEGIN_INCLUDE
 #include "code\global.dm"
 #include "code\hub.dm"
@@ -1577,9 +1577,12 @@
 #include "code\ZAS\Zone.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
-#include "maps\tgstation2.dmm"
+#include "maps\NEVSoteria.dmm"
 #include "Scopes Files\gravitygenerator.dm"
 #include "Scopes Files\medical_alarm.dm"
 #include "Scopes Files\signal_modifier.dm"
 #include "Scopes Files\space_cooler.dm"
 // END_INCLUDE
+// BEGIN_PREFERENCES
+#define DEBUG
+// END_PREFERENCES
