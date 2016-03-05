@@ -107,7 +107,7 @@
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)
 
 /obj/item/clothing/under/rank/medical/emt
-	name = "emergency medical technician's jumpsuit"
+	name = "paramedic's jumpsuit"
 	icon_state = "emt"
 	item_state = "emt"
 	item_color = "emt"

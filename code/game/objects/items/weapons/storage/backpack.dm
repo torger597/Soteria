@@ -104,7 +104,7 @@
 
 /obj/item/weapon/storage/backpack/emt
 	name = "emergency medical backpack"
-	desc = "It's a tough backpack used by first responders."
+	desc = "It's a tough backpack used by paramedics."
 	icon_state = "emtpack"
 	item_state = "emtpack"
 
@@ -143,7 +143,7 @@
 
 /obj/item/weapon/storage/backpack/satchel/emt
 	name = "emergency medical satchel"
-	desc = "It's a tough satchel used by first responders."
+	desc = "It's a tough satchel used by paramedics."
 	icon_state = "satchel-emt"
 	item_state = "satchel-emt"
 

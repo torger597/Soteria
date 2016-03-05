@@ -370,7 +370,7 @@ proc/populate_gear_list()
 	cost = 1
 
 /datum/gear/armband_emt
-	display_name = "EMT armband"
+	display_name = "Paramedic armband"
 	path = /obj/item/clothing/tie/armband/medgreen
 	cost = 1
 
