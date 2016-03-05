@@ -23,7 +23,7 @@ var/const/SCIENTIST			=(1<<1)
 var/const/CHEMIST			=(1<<2)
 var/const/CMO				=(1<<3)
 var/const/DOCTOR			=(1<<4)
-var/const/EMT				=(1<<5)
+var/const/PARAMEDIC			=(1<<5)
 var/const/GENETICIST		=(1<<6)
 var/const/VIROLOGIST		=(1<<7)
 var/const/PSYCHIATRIST		=(1<<8)
@@ -329,8 +329,8 @@ datum/preview/job/medsci/medical/chief_medical_officer
 	shoes_state="brown"
 	jacket_state="labcoat_cmo_open"
 
-datum/preview/job/medsci/medical/emt
-	job_index=EMT
+datum/preview/job/medsci/medical/paramedic
+	job_index=PARAMEDIC
 	uniform_state="emt_s"
 	jacket_state="fr_jacket_open"
 	backpack_01_state="emtpack"
