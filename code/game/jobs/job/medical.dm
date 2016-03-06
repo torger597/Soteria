@@ -97,9 +97,9 @@
 			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H.back), slot_in_backpack)
 		return 1
 
-/datum/job/emt
-	title = "Emergency Medical Tech"
-	flag = EMT
+/datum/job/paramedic
+	title = "Paramedic"
+	flag = PARAMEDIC
 	department_flag = MEDSCI
 	faction = "Ship"
 	total_positions = 2
@@ -108,7 +108,6 @@
 	selection_color = "#ffeef0"
 	access = list(access_medical, access_morgue, access_chemistry, access_genetics,access_maint_tunnels, access_external_airlocks)
 	minimal_access = list(access_medical, access_morgue, access_maint_tunnels, access_external_airlocks)
-	alt_titles = list("Paramedic")
 
 	equip(var/mob/living/carbon/human/H)
 		if(!H)	return 0
