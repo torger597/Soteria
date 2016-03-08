@@ -1,6 +1,6 @@
 # NEV Soteria
 
-[NEV Soteria Forums] 
+[NEV Soteria Forums](www.soteria.phy.sx)
 
 ---
 
