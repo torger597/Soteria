@@ -232,6 +232,7 @@
 
 
 */
+/*
 /datum/job/mime
 	title = "Mime"
 	flag = MIME
@@ -272,7 +273,7 @@
 		return 1
 
 
-
+*/
 /datum/job/janitor
 	title = "Janitor"
 	flag = JANITOR
