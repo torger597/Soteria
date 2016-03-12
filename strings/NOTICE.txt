@@ -1,0 +1,2 @@
+These text documents were released as part of the intellectual property of the collective of Something Awful coders (Goons) under a Creative Commons licence, in the 2016 public Goonstation release.
+This directory was been copied originally as is and was modified to fit the needs/requirements of the code base.
