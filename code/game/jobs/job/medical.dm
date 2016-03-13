@@ -113,10 +113,10 @@
 		if(!H)	return 0
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/headset_med(H), slot_l_ear)
 		switch(H.backbag)
-			if(2) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/emt(H), slot_back)
-			if(3) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel/emt(H), slot_back)
+			if(2) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/paramedic(H), slot_back)
+			if(3) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel/paramedic(H), slot_back)
 			if(4) H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel(H), slot_back)
-		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/emt(H), slot_w_uniform)
+		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/paramedic(H), slot_w_uniform)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/fr_jacket(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/device/pda/medical(H), slot_belt)
