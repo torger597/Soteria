@@ -29,6 +29,7 @@
 
 /obj/item/clothing/suit/fire/firefighter
 	icon_state = "firesuit"
+	desc = "A large, bulky NOMEX suit that protects against fire and heat."
 	item_state = "firefighter"
 
 

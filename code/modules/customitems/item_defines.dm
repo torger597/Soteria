@@ -768,9 +768,9 @@ THIS SHIT IS MISSING ANY AND ALL SPRITE FILES
 		if(isliving(user))
 			user.visible_message("\red [user] flashes their [src].\nIt reads: Muhammad Hamil, Internal Investigations, Persepolis..","\red You display the [src].\nIt reads: Muhammad Hamil, Internal Investigations, Persepolis.")
 
-/obj/item/clothing/mask/gas/fluff/stefan_mask // Modified Gas Mask - Oliver Stefan - Nbielinski - DONE
-	desc = "This odd looking gas mask is quite clearly not of NanoTrasen origin as it sports a black metal polish, as well as a reflective face plate that mirrors the view of the mask itself. This particular mask appears to breathe with the user, hissing when they exhale, and whining softly as they inhale."
-	name = "Modified Gas Mask"
+/obj/item/clothing/mask/gas/fluff/firefighting // Modified Gas Mask - Oliver Stefan - Nbielinski - DONE - Repurposed by Nick~
+	desc = "A black breathing mask that has 'Firefighter' inscribed on the side."
+	name = "Firefighting SCBA Mask"
 	icon = 'icons/obj/custom_items/stefan_mask.dmi'
 	icon_state = "stefan_mask"
 	contained_sprite = 1
