@@ -1155,7 +1155,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 
 			M.equip_to_slot_or_del(new /obj/item/device/healthanalyzer(M), slot_l_store)
 			M.equip_to_slot_or_del(new /obj/item/device/flash(M), slot_r_store)
-			M.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/emt(M), slot_back)
+			M.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/paramedic(M), slot_back)
 			M.equip_to_slot_or_del(new /obj/item/device/flashlight/pen(M), slot_s_store)
 			M.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/iac(M.back), slot_in_backpack)
 

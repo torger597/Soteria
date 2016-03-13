@@ -102,6 +102,38 @@
 		new /obj/item/weapon/storage/belt/medical(src)
 		return
 
+/obj/structure/closet/secure_closet/medical4
+	name = "Paramedic's Locker"
+	req_access = list(access_medical)
+	icon_state = "securemed1"
+	icon_closed = "securemed"
+	icon_locked = "securemed1"
+	icon_opened = "securemedopen"
+	icon_broken = "securemedbroken"
+	icon_off = "securemedoff"
+
+	New()
+		..()
+		sleep(2)
+		new /obj/item/weapon/storage/box/autoinjectors(src)
+		new /obj/item/weapon/storage/box/syringes(src)
+		new /obj/item/weapon/reagent_containers/dropper(src)
+		new /obj/item/weapon/reagent_containers/dropper(src)
+		new /obj/item/device/radio/headset/headset_med(src)
+		new /obj/item/device/radio/headset/headset_med(src)
+		new /obj/item/weapon/storage/belt/medical(src)
+		new /obj/item/weapon/storage/belt/medical(src)
+		new /obj/item/clothing/under/rank/medical/paramedic(src)
+		new /obj/item/clothing/under/rank/medical/paramedic(src)
+		new /obj/item/clothing/suit/storage/fr_jacket(src)
+		new /obj/item/clothing/suit/storage/fr_jacket(src)
+		new /obj/item/weapon/storage/backpack/satchel/paramedic(src)
+		new /obj/item/weapon/storage/backpack/paramedic(src)
+		new /obj/item/weapon/reagent_containers/glass/bottle/inaprovaline(src)
+		new /obj/item/weapon/reagent_containers/glass/bottle/inaprovaline(src)
+		new /obj/item/weapon/reagent_containers/glass/bottle/antitoxin(src)
+		new /obj/item/weapon/reagent_containers/glass/bottle/antitoxin(src)
+		return
 
 
 /obj/structure/closet/secure_closet/CMO
